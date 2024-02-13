@@ -1,18 +1,16 @@
 <script>
   import './MenuComponent.css';
   export default {
-    name: 'MenuComponent', // Name der Komponente
-    data() {
-      return {
-        isOpen: false
-      };
+    name: 'MenuComponent',
+    props: {
+      isOpen: Boolean // Definiere die Prop isOpen vom Typ Boolean
     },
     methods: {
       toggleMenu() {
-        this.isOpen = !this.isOpen;
+        this.$emit('update:isOpen', !this.isOpen); // Emitiere das Event mit dem aktualisierten Wert
       },
       closeMenu() {
-        this.isOpen = false;
+        this.$emit('update:isOpen', false); // Emitiere das Event, um das Menü zu schließen
       }
     }
   };
@@ -22,16 +20,14 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Menüschalter -->
-    <div class="navbar-toggler" @click="toggleMenu">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-      
-      <!-- Seitliches Menü -->
-      <div class="sidebar " :class="{ 'open': isOpen }">
+      <div class="sidebar" :class="{ 'open': isOpen }">
         <button class="close-button" @click="closeMenu">X</button>
+        <ul class="list-group w-75">
+          <li class="list-group-item bg-transparent border-0"><a href="#" class="text-dark">Menüpunkt 1</a></li>
+          <li class="list-group-item bg-transparent border-0"><a href="#" class="text-dark">Menüpunkt 2</a></li>
+          <li class="list-group-item bg-transparent border-0"><a href="#" class="text-dark">Menüpunkt 3</a></li>
+          <!-- Weitere Menüpunkte hier -->
+        </ul>
       </div>
     </nav>
   </div>

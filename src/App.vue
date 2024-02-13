@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import MenuComponent from './components/Menu/MenuComponent.vue';
+import HeaderLineComponent from './components/HeaderLine/HeaderLineComponent.vue';
 </script>
 
 <template>
-  <div>
-    <MenuComponent />
+  <div class="position-relative">
+    <HeaderLineComponent class="position-absolute top-0"/>
   </div>
 </template>
 
