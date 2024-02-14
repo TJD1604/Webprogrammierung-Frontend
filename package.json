@@ -18,6 +18,7 @@
     "bootstrap-vue-3": "^0.5.1",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",
+    "vue-responsive-video-background-player": "^2.3.1",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
