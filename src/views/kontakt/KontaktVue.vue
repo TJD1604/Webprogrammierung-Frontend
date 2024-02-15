@@ -1,12 +1,10 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import HeaderLineComponent from "@/components/HeaderLine/HeaderLineComponent.vue";
-import VideoBackgroundComponent from "@/components/VideoBackground/VideoBackgroundComponent.vue";
 export default defineComponent({
-  name: "HomeView",
+  name: "KontaktView",
   components: {
     HeaderLineComponent,
-    VideoBackgroundComponent
   }
   });
 </script>
@@ -16,8 +14,6 @@ export default defineComponent({
     <div class="position-relative">
       <HeaderLineComponent class="position-absolute top-0"/>
     </div>
-    <div class="position-relative">
-      <VideoBackgroundComponent/>
-    </div>
+      kontakt
   </div>
 </template>

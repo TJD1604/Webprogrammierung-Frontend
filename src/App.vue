@@ -1,17 +1,18 @@
-<script setup lang="ts">
-import HeaderLineComponent from './components/HeaderLine/HeaderLineComponent.vue';
-import VideoBackgroundComponent from './components/VideoBackground/VideoBackgroundComponent.vue';
+<script>
+import { defineComponent } from "vue";
+import { RouterView } from "vue-router";
+
+export default defineComponent({
+  name: "App",
+  components: {
+    RouterView
+  }
+});
 </script>
 
-<template>
-  <div class="position-relative">
-    <HeaderLineComponent class="position-absolute top-0"/>
-  </div>
-  <div class="position-relative">
-    <VideoBackgroundComponent/>
-  </div>
-  
-</template>
 
-<style scoped>
-</style>
+<template>
+  <div>
+    <RouterView />
+  </div>
+</template>

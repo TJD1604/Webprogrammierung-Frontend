@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/home/HomeView.vue";
+import HomeView from "@/views/home/HomeView.vue";
+import KontaktView from "@/views/kontakt/KontaktVue.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,9 +11,9 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/apiTest/:pathMatch(.*)*",
-      name: "apiTest",
-      component: () => import("../views/apiTest/ApiTestView.vue"),
+      path: "/kontakt",
+      name: "kontakt",
+      component: KontaktView,
     }
   ],
 });
