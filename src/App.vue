@@ -16,3 +16,9 @@ export default defineComponent({
     <RouterView />
   </div>
 </template>
+
+<style>
+#app {
+  font-family: "Lucida Sans", "Lucida Grande", sans-serif; 
+}
+</style>

@@ -32,9 +32,9 @@ export default defineComponent({
       <div class="sidebar" :class="{ 'open': isOpen }">
         <button class="close-button" @click="closeMenu">X</button>
         <ul class="list-group w-75">
-          <li class="list-group-item bg-transparent border-0 text-dark"><RouterLink to="/">home</RouterLink></li>
-          <li class="list-group-item bg-transparent border-0 text-dark"><RouterLink to="/kontakt">kontakt</RouterLink></li>
-          <li class="list-group-item bg-transparent border-0 text-dark"><RouterLink to="/">home</RouterLink></li>
+          <li class="list-group-item bg-transparent border-0 text-dark"><RouterLink to="/"><h5>Home</h5></RouterLink></li>
+          <li class="list-group-item bg-transparent border-0 text-dark"><RouterLink to="/kontakt"><h5>Kontakt</h5></RouterLink></li>
+          <li class="list-group-item bg-transparent border-0 text-dark"><RouterLink to="/"><h5>Home</h5></RouterLink></li>
           <!-- Weitere Menüpunkte hier -->
         </ul>
       </div>
