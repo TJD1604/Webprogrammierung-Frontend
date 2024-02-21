@@ -22,3 +22,14 @@
     color: rgb(210, 184, 157);
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); 
   }
+  .info{
+    font: sans-serif;
+    position: absolute;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    color: rgb(210, 184, 157);
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); 
+  }

@@ -16,6 +16,7 @@ export default defineComponent({
             <img :src="imagePath"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"> 
             <h1 class="title"> {{ title }}</h1>
+            <text class="info"> Mehr über die Kollektion -  Jana wie war Name</text>
         </div>
     </div>
 </template>
