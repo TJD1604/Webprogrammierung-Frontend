@@ -1,7 +1,7 @@
 <script>
 import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
-import "https://fonts.googleapis.com/css2?family=Dubai:wght@400;700&display=swap";
+
 
 
 
@@ -22,8 +22,16 @@ export default defineComponent({
 </template>
 
 <style>
+
+@font-face {
+  font-family: Dubai;
+  src: url('./fonts/Dubai-Font/DubaiW23-Regular.woff2') format('woff2'),
+       url('./fonts/Dubai-Font/DubaiW23-Regular.woff') format('woff'),
+       url('./fonts/Dubai-Font/DubaiW23-Regular.tte') format('truetype');
+}
+
 #app {
-  font-family: sans-serif; 
+  font-family: Dubai; 
 }
 
 h1,h2,h3,h4,h5,h6{
