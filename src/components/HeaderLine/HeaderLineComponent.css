@@ -7,7 +7,9 @@
   padding: 10px 0;
   transition: top 0.3s;
   z-index: 9997;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
 }
+
 
 .header-hidden {
   top: -100px;
@@ -25,6 +27,7 @@
 .logo {
   width: 40%;
   height: auto;
+  filter: brightness(0) invert(1);
 }
 
 .bar1, .bar2, .bar3 {
