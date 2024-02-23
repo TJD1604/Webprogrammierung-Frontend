@@ -31,7 +31,7 @@ export default defineComponent({
 }
 
 #app {
-  font-family: Dubai; 
+  font-family: Dubai, sans-serif; 
 }
 
 h1,h2,h3,h4,h5,h6{
