@@ -25,7 +25,6 @@ export default defineComponent({
    
       <div class="content-inner">
         <h1>Hello, Webseite!</h1>
-        <div class="blocker"></div>
         <!-- Weitere Inhalte -->
         <CustomButton buttonText="Kontakt" imagePath="/images/Kontakt.JPG" destination="/kontakt"/>
       
@@ -43,7 +42,7 @@ export default defineComponent({
 .content-inner {
   padding: 20px;
   height: 100vh;
-  background-color: rgb(210, 184, 157);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-top: 1px solid #ccc;
 }
@@ -62,8 +61,5 @@ export default defineComponent({
   background-color: #555;
 }
 
-.blocker {
-  height: 400px;
-  width: 100vh;
-}
+
 </style>
