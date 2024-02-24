@@ -17,6 +17,9 @@ export default defineComponent({
     closeMenu(): void {
       this.isMenuOpen = false;
     },
+    homelink(): void {
+      this.$router.push('/');
+    },
   },
   mounted() {
     let lastScrollTop = 0;
@@ -45,7 +48,7 @@ export default defineComponent({
             </button>
           </div>
           <div class="col-8 text-center">
-            <img src="../../assets/logo.png" alt="Logo" class="logo img-fluid">
+            <img src="../../assets/logo.png" alt="Logo" class="logo img-fluid" @click="homelink">
           </div>
           <div class="col-2"></div>
         </div>

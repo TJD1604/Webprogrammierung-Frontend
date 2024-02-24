@@ -6,7 +6,7 @@
         <button class="close-button" @click="closeMenu">X</button>
         <ul class="list-group w-75">
           <li v-for="(item, index) in menuItems" :key="index">
-            <h5 :class="{ 'main-title': !item.subItems, 'sub-menu-title': item.subItems }" @mouseover="hoverEffect(index)">
+            <h5 :class="{ 'main-title': !item.subItems, 'sub-menu-title': item.subItems }">
               <RouterLink :to="item.link">{{ item.title }}</RouterLink>
               <span v-if="item.subItems" @click="toggleSubMenu(index)">
                 <span class="expand-icon">v</span>
