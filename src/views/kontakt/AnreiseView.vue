@@ -2,7 +2,7 @@
 import { defineComponent } from "vue";
 import HeaderLineComponent from "@/components/HeaderLine/HeaderLineComponent.vue";
 import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
-
+import '../view.css'
 export default defineComponent({
   name: "AnreiseView",
   components: {

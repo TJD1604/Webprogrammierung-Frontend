@@ -3,7 +3,7 @@
       <div class="button-content">
         <img :src="imagePath" class="button-image" />
         <div class="button-text">{{ buttonText }}</div>
-        <div class="arrow" @mouseover="changeBackground" @mouseleave="resetBackground"></div>
+        <div class="arrow" @mouseover="changeBackground" @mouseleave="resetBackground">&#10140;</div>
       </div>
     </div>
   </template>
@@ -83,9 +83,7 @@
     cursor: pointer;
   }
   
-  .arrow::after {
-    content: '\2192'; 
-  }
+ 
   
   .arrow:hover {
     background-color: rgba(210, 184, 157, 0.5);

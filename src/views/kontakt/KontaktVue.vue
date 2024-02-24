@@ -3,7 +3,7 @@ import { defineComponent } from "vue";
 import HeaderLineComponent from "@/components/HeaderLine/HeaderLineComponent.vue";
 import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
 import FooterComponent from "@/components/Footer/FooterComponent.vue";
-
+import '../view.css'
 export default defineComponent({
   name: "KontaktView",
   components: {
