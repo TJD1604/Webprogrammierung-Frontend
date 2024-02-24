@@ -11,7 +11,7 @@ export default defineComponent({
     };
   },
   methods: {
-    toggleMenu(): void {
+    toggleMenu(){
       this.isMenuOpen = !this.isMenuOpen;
     },
     closeMenu(): void {

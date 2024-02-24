@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="overlay" v-if="isOpen" @click="closeMenu"></div>
+      <div class="overlay" v-if="isOpen" @click="changeMenu"></div>
       <div class="sidebar" :class="{ open: isOpen }">
-        <button class="close-button" @click="closeMenu">X</button>
+        <button class="close-button" @click="changeMenu">X</button>
         <ul class="list-group w-75">
           <li v-for="(item, index) in menuItems" :key="index">
             <h5 :class="{ 'main-title': !item.subItems, 'sub-menu-title': item.subItems }">
@@ -49,12 +49,9 @@ export default defineComponent({
     }
   },
   methods: {
-    toggleMenu(): void {
+    changeMenu(){
       this.$emit('update:isOpen', !this.isOpen)
     },
-    closeMenu(): void {
-      this.$emit('update:isOpen', false)
-    }
   },
   setup() {
     const menuItems: MenuItem[] = [

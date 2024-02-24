@@ -3,9 +3,6 @@ import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
 
 
-
-
-
 export default defineComponent({
   name: "App",
   components: {
@@ -37,7 +34,4 @@ export default defineComponent({
 h1,h2,h3,h4,h5,h6{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
-
-
-
 </style>
