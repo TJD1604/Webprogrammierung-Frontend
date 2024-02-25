@@ -26,3 +26,15 @@
     background-color: #555;
   }
   
+  .content-inner h2 {
+    text-align: center;
+    font-size: 50px; /* Größe anpassen */
+    margin-top: 0; /* Margin oben entfernen, um die Mitte oben zu positionieren */
+    font-family: 'Lucida Sans';
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px; 
+  }

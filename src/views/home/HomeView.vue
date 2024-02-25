@@ -24,11 +24,12 @@ export default defineComponent({
     </div>
    
       <div class="content-inner">
-        <h1>Hello, Webseite!</h1>
-        <P>Hello, </P>
-        <!-- Weitere Inhalte -->
-        <CustomButton buttonText="Kontakt" imagePath="/images/Kontakt.JPG" destination="/kontakt"/>
-      
+        <h2 class="h2">Entdecken</h2>
+        <div class="button-container">
+        <CustomButton buttonText="Wettbewerbe" imagePath="/images/Wettbewerbe.JPG" destination="/wettbewerbe"/>
+        <CustomButton buttonText="Button 2" imagePath="/images/Kontakt.JPG" destination="/kontakt"/>
+        <CustomButton buttonText="Button 3" imagePath="/images/Kontakt.JPG" destination="/kontakt"/>
+      </div>
     </div>
   </div>
 </template>

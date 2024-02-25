@@ -9,24 +9,35 @@ export default defineComponent({
   },
   data() {
     return {
-      showArrow: false
+      showArrow: false,
+      timeoutId: null
     };
   },
   mounted() {
-    
-    setTimeout(() => {
+    this.timeoutId = setTimeout(() => {
       this.showArrow = true;
-      
     }, 3000);
+    window.addEventListener('scroll', this.handleInteraction);
+    window.addEventListener('click', this.handleInteraction);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleInteraction);
+    window.removeEventListener('click', this.handleInteraction);
   },
   methods: {
+    handleInteraction() {
+      clearTimeout(this.timeoutId);
+      this.showArrow = false;
+      window.removeEventListener('scroll', this.handleInteraction);
+      window.removeEventListener('click', this.handleInteraction);
+    },
     scrollToBottom() {
-      
       this.showArrow = false;
       window.scrollBy({
-        top: window.innerHeight / 4, // Scroll 1/4 of the window height
+        top: window.innerHeight / 4, 
         behavior: 'smooth'
       });
+      this.handleInteraction();
     }
   }
 })
@@ -43,7 +54,6 @@ export default defineComponent({
       <div class="pic-bottom">
         <h1 class="title">{{ title }}</h1>
         <a href="/produkte" class="transparent-button">→</a>
-        <!-- Show arrow after 1 second -->
         <a v-if="showArrow" class="scroll-down-arrow" @click="scrollToBottom">↓</a>
       </div>
     </div>
