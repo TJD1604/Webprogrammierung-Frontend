@@ -1,18 +1,23 @@
 <template>
   <div class="carousel-container">
     <div class="carousel" ref="carousel">
-      <div v-for="(review, index) in reviews" :key="index" class="review" :style="{ transform: `translateX(-${currentSlide * 320}px)` }">
+      <div class="review" v-for="(review, index) in reviews" :key="index" :class="{ 'active': index === currentSlide }">
         <div class="stars">{{ review.stars }}</div>
         <div class="username">{{ review.username }}</div>
         <div class="text">{{ review.text }}</div>
       </div>
     </div>
-    <button class="prev" @click="prevSlide">←</button>
-    <button class="next" @click="nextSlide">→</button>
+    <div class="navigation">
+      <button class="prev" @click="prevSlide">←</button>
+      <div class="dots">
+        <span class="dot" v-for="(review, index) in reviews" :key="index" :class="{ 'active': index === currentSlide }" @click="jumpToSlide(index)"></span>
+      </div>
+      <button class="next" @click="nextSlide">→</button>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   data() {
     return {
@@ -58,19 +63,22 @@ export default {
   },
   methods: {
     prevSlide() {
-      if (this.currentSlide > 0) {
-        this.currentSlide--;
-      } else {
-        this.currentSlide = this.reviews.length - 1;
-      }
+      this.currentSlide = (this.currentSlide - 1 + this.reviews.length) % this.reviews.length;
     },
     nextSlide() {
-      if (this.currentSlide < this.reviews.length - 1) {
-        this.currentSlide++;
-      } else {
-        this.currentSlide = 0;
-      }
+      this.currentSlide = (this.currentSlide + 1) % this.reviews.length;
+    },
+    jumpToSlide(index) {
+  this.currentSlide = index;
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, i) => {
+    if (i === index) {
+      dot.classList.add('wide');
+    } else {
+      dot.classList.remove('wide');
     }
+  });
+}
   }
 }
 </script>
@@ -78,27 +86,37 @@ export default {
 <style scoped>
 .carousel-container {
   position: relative;
-  width: 80%;
-  margin: 0 auto;
+  height: 350px;
+  place-items: center;
+  align-self: center;
+  display: grid;
 }
 
 .carousel {
-  display: flex;
+  width: 300px;
   overflow: hidden;
+  position: relative;
+  justify-items: center;
 }
 
 .review {
-  flex: 0 0 auto;
+  justify-self: center;
+  display: none;
   width: 300px;
-  margin-right: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  transition: transform 0.5s ease; /* Füge eine Transition für eine sanfte Animation hinzu */
+  border: 1px solid rgb(210, 184, 157);
+  transition: transform 0.5s ease;
+}
+
+.review.active {
+  display: grid;
+  justify-self: center;
 }
 
 .stars {
   font-size: 24px;
   margin-bottom: 10px;
+  color: rgb(210, 184, 157);
 }
 
 .username {
@@ -115,14 +133,48 @@ export default {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .prev {
-  left: 0;
+  left: 5px; 
 }
 
 .next {
-  right: 0;
+  right: 5px; 
 }
 
+.prev:hover, .next:hover {
+  background-color: rgba(210, 184, 157, 0.5);
+}
+
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots {
+  display: flex;
+  margin: 0 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.dot.active {
+  background-color:  rgb(210, 184, 157);
+  border-radius: 10px; 
+  width: 16px; 
+}
 </style>

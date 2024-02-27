@@ -3,7 +3,7 @@ import { defineComponent } from 'vue'
 import HeaderLineComponent from '@/components/HeaderLine/HeaderLineComponent.vue'
 import VideoBackgroundComponent from '@/components/VideoBackground/VideoBackgroundComponent.vue'
 import CustomButton from '@/components/CustomButton/CustomButton.vue'
-import ReviewCaoursel from '@/components/ReviewCarousel/ReviewCarousel.vue'
+
 import '../view.css'
 export default defineComponent({
   name: 'HomeView',
@@ -11,7 +11,7 @@ export default defineComponent({
     HeaderLineComponent,
     VideoBackgroundComponent,
     CustomButton,
-    ReviewCaoursel
+    
   }
 })
 </script>
@@ -27,7 +27,6 @@ export default defineComponent({
 
     <div class="content-inner">
 
-      <ReviewCaoursel/>
         <div class="button-container"> 
           <div>
         <h2 class="h2">Entdecken</h2>
