@@ -26,6 +26,22 @@ export default defineComponent({
     <div class="position-relative">
       <PicBackgroundComponent :imagePath='imagePath' :title='title' />
     </div>
+    <div class="content-inner">
+      
+      <div class="button-container"> 
+        <div>
+      <h2 class="h2">Entdecken</h2>
+      <p class="info-text">
+        Entdecke, was unser Team so besonders macht! Besuche uns und gönn dir köstliche <br> Leckereien
+        in unserer gemütlichen Kantine, nimm an spannenden Wettbewerben teil<br>  und erweitere dein
+        Wissen durch inspirierende Weiterbildungen. <br>Es gibt viel zu entdecken und zu genießen –
+        komm vorbei und erlebe es selbst! <br /><strong>#Entdecken #GemeinsamStark</strong>
+      </p>
+    </div>
+     
+      
+    </div>
+  </div>
     
   </div>
 </template>
