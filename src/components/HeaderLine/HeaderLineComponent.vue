@@ -48,7 +48,7 @@ export default defineComponent({
             </button>
           </div>
           <div class="col-8 text-center">
-            <img src="../../assets/logo.png" alt="Logo" class="logo img-fluid" @click="homelink">
+            <img src="../../../public/logo.png" alt="Logo" class="logo img-fluid" @click="homelink">
           </div>
           <div class="col-2"></div>
         </div>
