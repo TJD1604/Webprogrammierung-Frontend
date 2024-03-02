@@ -116,3 +116,10 @@
   font-weight: normal;
   list-style-type: none;
 }
+
+.sub-item-0:hover {
+  transform: scale(1.05);
+}
+.sub-item-1:hover {
+  transform: scale(1.05);
+}

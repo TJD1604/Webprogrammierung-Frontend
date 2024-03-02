@@ -7,13 +7,14 @@
         <ul class="list-group w-75">
           <li v-for="(item, index) in menuItems" :key="index">
             <h5 :class="{ 'main-title': !item.subItems, 'sub-menu-title': item.subItems }">
-              <RouterLink :to="item.link">{{ item.title }}</RouterLink>
               <span v-if="item.subItems" @click="toggleSubMenu(index)">
-                <span class="expand-icon">v</span>
+                <span class="expand-icon">v </span>
               </span>
+              <RouterLink :to="item.link">{{ item.title }}</RouterLink>
+              
             </h5>
             <ul v-if="item.subItems && openSubMenu === index" class="sub-menu">
-              <li v-for="(subItem, subIndex) in item.subItems" :key="subIndex">
+              <li v-for="(subItem, subIndex) in item.subItems" :key="subIndex" :class="'sub-item-' + subIndex">
                 <RouterLink :to="subItem.link">{{ subItem.title }}</RouterLink>
               </li>
             </ul>
