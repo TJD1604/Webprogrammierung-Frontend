@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 import HeaderLineComponent from '@/components/HeaderLine/HeaderLineComponent.vue'
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
-import ReviewCaoursel from '@/components/ReviewCarousel/ReviewCarousel.vue'
+import ReviewCaourselComponent from '@/components/ReviewCarousel/ReviewCarouselComponent.vue'
 import '../view.css'
 
 export default defineComponent({
@@ -10,7 +10,7 @@ export default defineComponent({
   components: {
     HeaderLineComponent,
     PicBackgroundComponent,
-    ReviewCaoursel
+    ReviewCaourselComponent
   },
   data() {
     return {
@@ -30,7 +30,7 @@ export default defineComponent({
       <PicBackgroundComponent :imagePath="imagePath" :title="title" />
     </div>
     <div class="content-inner">
-      <ReviewCaoursel />
+      <ReviewCaourselComponent />
     </div>
   </div>
 </template>
