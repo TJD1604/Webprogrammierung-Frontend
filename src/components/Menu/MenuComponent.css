@@ -4,7 +4,7 @@
   left: -560px;
   width: 430px;
   height: 100%;
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
   transition: left 0.3s ease;
   z-index: 9999;
   overflow-y: scroll;
