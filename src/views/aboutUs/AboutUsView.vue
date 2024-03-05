@@ -8,7 +8,7 @@ import '../view.css'
 export default defineComponent({
   name: 'AboutUsView',
   components: {
-    HeaderLineComponent,
+
     PicBackgroundComponent,
     ReviewCaourselComponent
   },
