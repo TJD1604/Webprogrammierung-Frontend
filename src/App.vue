@@ -1,21 +1,27 @@
 <script>
 import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
+import FooterComponent from "@/components/Footer/FooterComponent.vue";
+import HeaderLineComponent from "@/components/HeaderLine/HeaderLineComponent.vue";
 
 
 export default defineComponent({
   name: "App",
   components: {
-    RouterView
+    HeaderLineComponent,
+    RouterView,
+    FooterComponent
   }
 });
 </script>
 
 
 <template>
-  <div>
-    <RouterView />
+  <div class="position-relative">
+    <HeaderLineComponent class="position-absolute top-0"/>
   </div>
+  <RouterView />
+  <FooterComponent />
 </template>
 
 <style>

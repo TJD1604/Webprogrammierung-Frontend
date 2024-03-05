@@ -8,7 +8,7 @@ import '../view.css'
 export default defineComponent({
   name: 'HomeView',
   components: {
-    HeaderLineComponent,
+
     VideoBackgroundComponent,
     CustomButton,
     
