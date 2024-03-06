@@ -24,7 +24,8 @@ export default defineComponent({
       <PicBackgroundComponent :imagePath="imagePath" :title="title" />
     </div>
     <div class="content-inner">
-      <CollageComponent />
+      <CollageComponent/>
     </div>
   </div>
 </template>
+

@@ -1,47 +1,82 @@
 <template>
-  <div class="collage">
-    <div v-for="(image, index) in images" :key="index" class="image" :style="{ 'background-image': 'url(' + image + ')' }"></div>
-  </div>
+  <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
+    <Slide v-for="(image, index) in images" :key="index">
+      <img :src="image" class="carousel__item" alt="Slide">
+    </Slide>
+  </Carousel>
+
+  <Carousel
+    id="thumbnails"
+    :items-to-show="5"
+    :wrap-around="true"
+    v-model="currentSlide"
+    ref="carousel"
+  >
+    <Slide v-for="(image, index) in images" :key="index">
+      <img :src="image" class="carousel__thumbnail" alt="Thumbnail" @click="slideTo(index)">
+    </Slide>
+  </Carousel>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      images: [
-        '/public/images/Produkte.JPG',
-        '/public/images/Produkte.JPG',
-        '/public/images/Produkte.JPG',
-        '/public/images/Produkte.JPG'
-      ] as string[]
-    };
+<script>
+import { defineComponent } from 'vue'
+import { Carousel, Slide } from 'vue3-carousel'
+
+import 'vue3-carousel/dist/carousel.css'
+
+export default defineComponent({
+  name: 'CollageComponent',
+  components: {
+    Carousel,
+    Slide,
   },
-  mounted() {
-    this.shuffleImages();
-  },
+  data: () => ({
+    currentSlide: 0,
+    images: [
+      '/images/Datenschutz.jpg',
+      '/images/DetailsJobangebote.jpg',
+      '/images/DetailsMitarbeitende.JPG',
+      '/images/DetailsPartnerinnen.jpg',
+      '/images/DetailWeiterbildung.JPG',
+      '/images/DetailsProdukte.jpg',
+      '/images/DetailsSpendenprojekte.jpg',
+      '/images/Geschichte.jpg',
+      '/images/Impressum.jpg',
+      '/images/Jobangebote.JPG',
+      '/images/Kantine.jpg',
+      '/images/Karriere.JPG',
+      '/images/Kontakt.JPG',
+      '/images/Mitarbeitende.JPG',
+      '/images/Partnerinnen.JPG',
+      '/images/Produkte_Künstlerin.jpg',
+      '/images/Produkte.JPG',
+      '/images/Spendenprojekete.jpg',
+      '/images/ÜberUnsZiele.JPG',
+      '/images/Weiterbildung.jpg',
+      '/images/Wettbewerbe.JPG',
+      '/images/CookieRichtlinien.JPG'
+    ],
+  }),
   methods: {
-    // Eine Methode zum Mischen der Bilder
-    shuffleImages() {
-      // Fisher-Yates Shuffle Algorithmus
-      for (let i = this.images.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [this.images[i], this.images[j]] = [this.images[j], this.images[i]];
-      }
-    }
-  }
-}
+    slideTo(index) {
+      this.currentSlide = index;
+    },
+  },
+})
 </script>
 
-<style scoped>
-.collage {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatische Spaltenanpassung */
-  gap: 10px; /* Abstand zwischen den Bildern */
+<style>
+.carousel{
+  width: 80%;
+  align-self: center;
+}
+.carousel__item {
+  max-height: 500px;
 }
 
-.image {
-  height: 200px; /* Höhe der Bilder */
-  background-size: cover;
-  background-position: center;
+.carousel__thumbnail {
+  max-height: 200px; /* Set the maximum height for the thumbnails */
+  
+  width: 90%;
 }
 </style>
