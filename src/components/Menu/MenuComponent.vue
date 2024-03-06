@@ -87,7 +87,6 @@ export default defineComponent({
       ]},
       { title: 'Kontakt', link: '/kontakt' },
       { title: 'Anreise', link: '/anreise' },
-      { title: 'Cookie Richtlinien', link: '/cookie' },
       { title: 'Datenschutzrichtlinien', link: '/datenschutz' },
       { title: 'Impressum', link: '/impressum' },
     ]

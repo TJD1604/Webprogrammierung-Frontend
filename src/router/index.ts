@@ -3,8 +3,7 @@ import HomeView from "@/views/home/HomeView.vue";
 import KontaktView from "@/views/kontakt/KontaktVue.vue";
 import ImpressumView from "@/views/impressum/ImpressumView.vue";
 import AboutUsView from "@/views/aboutUs/AboutUsView.vue";
-import AuszeichnungenView from "@/views/aboutUs/AuszeichnungenView.vue"; 2
-import CookieView from "@/views/cookie/CookieView.vue";
+import AuszeichnungenView from "@/views/aboutUs/AuszeichnungenView.vue"; 
 import DatenschutzView from "@/views/datenschutz/DatenschutzView.vue";
 import GeschichteView from "@/views/geschichte/GeschichteView.vue";
 import KantinenView from "@/views/kantine/KantinenView.vue";
@@ -54,11 +53,6 @@ const router = createRouter({
       name: "auszeichnungen",
       component: AuszeichnungenView,
     }, 
-    {
-      path: "/cookie",
-      name: "cookie",
-      component: CookieView,
-    },
     {
       path: "/datenschutz",
       name: "datenschutz",
