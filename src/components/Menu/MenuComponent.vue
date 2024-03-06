@@ -5,17 +5,13 @@
       <div class="sidebar" :class="{ open: isOpen }">
         <button class="close-button" @click="changeMenu">X</button>
         <ul class="list-group w-75">
-          <li v-for="(item, index) in menuItems" :key="index">
+          <li v-for="(item, index) in menuItems" :key="index" @mouseenter="toggleSubMenu(index)">
             <h5 :class="{ 'main-title': !item.subItems, 'sub-menu-title': item.subItems }">
-              <span v-if="item.subItems" @click="toggleSubMenu(index)">
-                <span class="expand-icon">v </span>
-              </span>
               <RouterLink :to="item.link">{{ item.title }}</RouterLink>
-              
             </h5>
             <ul v-if="item.subItems && openSubMenu === index" class="sub-menu">
               <li v-for="(subItem, subIndex) in item.subItems" :key="subIndex" :class="'sub-item-' + subIndex">
-                <RouterLink :to="subItem.link">{{ subItem.title }}</RouterLink>
+                <RouterLink :to="subItem.link"><p style="font-family: 'Lucida Sans'; margin: 0;">{{ subItem.title }}</p></RouterLink>
               </li>
             </ul>
           </li>
