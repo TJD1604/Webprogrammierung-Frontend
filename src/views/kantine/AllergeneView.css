@@ -1,0 +1,30 @@
+.tabellendiv{
+margin-top: 70px;
+margin-left: 80px;
+margin-right: 80px;
+}
+.acronym{
+    font-weight: bold;
+}
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: solid #CCC 1px;
+    border-radius: 5px;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: solid #CCC 1px;
+  }
+  
+  th:first-child, td:first-child {
+    border-left: solid #CCC 1px;
+  }
+  
+  th:last-child, td:last-child {
+    border-right: solid #CCC 1px;
+  }
+  
