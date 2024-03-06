@@ -1,26 +1,36 @@
 <template>
-  <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
-    <Slide v-for="(image, index) in images" :key="index">
-      <img :src="image" class="carousel__item" alt="Slide">
-    </Slide>
-  </Carousel>
+  <div>
+    <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
+      <Slide v-for="(image, index) in images" :key="index">
+        <img :src="image" class="carousel__item" alt="Slide" @click="openLightbox">
+      </Slide>
+    </Carousel>
 
-  <Carousel
-    id="thumbnails"
-    :items-to-show="5"
-    :wrap-around="true"
-    v-model="currentSlide"
-    ref="carousel"
-  >
-    <Slide v-for="(image, index) in images" :key="index">
-      <img :src="image" class="carousel__thumbnail" alt="Thumbnail" @click="slideTo(index)">
-    </Slide>
-  </Carousel>
+    <Carousel
+      id="thumbnails"
+      :items-to-show="5"
+      :wrap-around="true"
+      v-model="currentSlide"
+      ref="carousel"
+    >
+      <Slide v-for="(image, index) in images" :key="index">
+        <img :src="image" class="carousel__thumbnail" alt="Thumbnail" @click="slideTo(index)">
+      </Slide>
+    </Carousel>
+
+    <lightbox-component
+      :show-lightbox="showLightbox"
+      :current-slide="currentSlide"
+      :images="images"
+      @close-lightbox="closeLightbox"
+    ></lightbox-component>
+  </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import { Carousel, Slide } from 'vue3-carousel'
+import LightboxComponent from './LightboxComponent.vue'
 
 import 'vue3-carousel/dist/carousel.css'
 
@@ -29,6 +39,7 @@ export default defineComponent({
   components: {
     Carousel,
     Slide,
+    LightboxComponent,
   },
   data: () => ({
     currentSlide: 0,
@@ -56,27 +67,34 @@ export default defineComponent({
       '/images/Wettbewerbe.JPG',
       '/images/CookieRichtlinien.JPG'
     ],
+    showLightbox: false,
   }),
   methods: {
     slideTo(index) {
       this.currentSlide = index;
+    },
+    openLightbox() {
+      this.showLightbox = true;
+    },
+    closeLightbox() {
+      this.showLightbox = false;
     },
   },
 })
 </script>
 
 <style>
-.carousel{
-  width: 80%;
+.carousel {
+  width: 100%;
   align-self: center;
 }
+
 .carousel__item {
   max-height: 500px;
 }
 
 .carousel__thumbnail {
-  max-height: 200px; /* Set the maximum height for the thumbnails */
-  
+  max-height: 200px;
   width: 90%;
 }
 </style>
