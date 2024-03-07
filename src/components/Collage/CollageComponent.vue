@@ -90,7 +90,7 @@ export default defineComponent({
 }
 
 .carousel__item {
-  max-height: 500px;
+  max-height: 400px;
 }
 
 .carousel__thumbnail {

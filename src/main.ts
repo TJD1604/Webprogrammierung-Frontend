@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { Plugin } from 'vue-responsive-video-background-player'
 import 'vue-fullpage.js/dist/style.css'
+//import './fullpage.scrollHorizontally.min' // Optional. When using fullpage extensions
 import VueFullPage from 'vue-fullpage.js'
 
 const app = createApp(App)

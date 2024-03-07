@@ -4,7 +4,7 @@ import MenuComponent from '@/components/Menu/MenuComponent.vue';
 import './HeaderLineComponent.css'
 
 export default defineComponent({
-  data(): { isHeaderHidden: boolean; isMenuOpen: boolean } {
+  data() {
     return {
       isHeaderHidden: false,
       isMenuOpen: false,
@@ -20,14 +20,24 @@ export default defineComponent({
     homelink(): void {
       this.$router.push('/');
     },
+    handleScroll(event) {
+      // Check the direction of scroll
+      if (event.deltaY > 0) {
+        // Scrolling down
+        this.isHeaderHidden = true;
+      } else {
+        // Scrolling up
+        this.isHeaderHidden = false;
+      }
+    },
   },
   mounted() {
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', () => {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      this.isHeaderHidden = currentScroll > lastScrollTop && currentScroll > 50;
-      lastScrollTop = currentScroll;
-    });
+    // Attach wheel event listener
+    window.addEventListener('wheel', this.handleScroll);
+  },
+  destroyed() {
+    // Remove wheel event listener when component is destroyed
+    window.removeEventListener('wheel', this.handleScroll);
   },
   components: {
     MenuComponent,

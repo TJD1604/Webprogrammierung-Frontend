@@ -1,5 +1,5 @@
 .subheading{
-font-size: medium;
+font-size: medium !important;
 }
 .textdev{
     margin-left: 20px;
