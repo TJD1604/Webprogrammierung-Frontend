@@ -5,9 +5,7 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-
 import BootstrapVue3 from 'bootstrap-vue-3'
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { Plugin } from 'vue-responsive-video-background-player'
