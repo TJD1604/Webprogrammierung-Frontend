@@ -24,7 +24,7 @@ export default defineComponent({
   <CookieConsent 
     message="Wir backen nicht nur Cookies in unsere Kantine, sondern auch auf unserer Webseite."
     linkLabel="Erfahre mehr"
-    href="/cookie"
+    href="/datenschutz"
     target="_blank"
     rel="noopener"
     buttonLabel="Verstanden"
@@ -40,6 +40,7 @@ export default defineComponent({
         alignItems: 'center',
         padding: '20px'
       }"
+    
   />
   <RouterView />
   <FooterComponent />
@@ -62,8 +63,8 @@ h1,h2,h3,h4,h5,h6{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
-.cookie-consent-button {
-  background-color: #007bff;
+.cookie-consent-compliance {
+  background-color: #2f2f2f83;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -73,8 +74,8 @@ h1,h2,h3,h4,h5,h6{
   transition: background-color 0.3s ease;
 }
 
-.cookie-consent-button:hover {
-  background-color: #0056b3;
+.cookie-consent-compliance:hover {
+  background-color: #2f2f2fe1;
 }
 
 </style>
