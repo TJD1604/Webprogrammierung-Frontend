@@ -1,14 +1,56 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<template>
+  <div>
+    <full-page :options="options">
+      <div class="section">
+        <div class="position-relative">
+          <PicBackgroundComponent :imagePath="imagePath" :title="title" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="content-inner">
+          <div class="container">
+            <div class="row mx-auto">
+              <div class="col-md-4">
+                <div class="arrival-div">
+                  <div class="card m-5 rounded border p-2 self-center mx-auto">
+                    <div class="card-body">
+                      <h4 class="card-title">Kontaktinformationen</h4>
+                      <p class="card-text"><strong>Email:</strong> kontakt@example.com</p>
+                      <p class="card-text"><strong>Telefon:</strong> +49 123 456789</p>
+                      <p class="card-text"><strong>Adresse:</strong> Musterstraße 123, 12345 Musterstadt</p>
+                      <p class="card-text"><strong>Ansprechpartner:</strong> Max Mustermann</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="arrival-div">
+                  <ContactForm />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <FooterComponent />
+      </div>
+    </full-page>
+  </div>
+</template>
 
-import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
-import FooterComponent from '@/components/Footer/FooterComponent.vue'
-import '../view.css'
+<script lang="ts">
+import { defineComponent } from 'vue';
+import ContactForm from '@/components/ContactForm/ContactForm.vue';
+import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue';
+import FooterComponent from '@/components/Footer/FooterComponent.vue';
+import '../view.css';
+
 export default defineComponent({
   name: 'KontaktView',
   components: {
     FooterComponent,
-
+    ContactForm,
     PicBackgroundComponent
   },
   data() {
@@ -25,61 +67,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<template>
-  <div>
-    <full-page :options="options">
-      <div class="section">
-        <div class="position-relative">
-          <PicBackgroundComponent :imagePath="imagePath" :title="title" />
-        </div>
-      </div>
-      <div class="section">
-        <div class="content-inner">
-          <div
-            class="m-5 rounded border p-2 w-75 self-center mx-auto"
-            style="border-color: lightslategray; background-color: rgba(250, 235, 215, 0.384)"
-          >
-            <form>
-              <div class="form-group mb-3">
-                <label for="email">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Email"
-                  required
-                />
-                <small id="emailHelp" class="form-text text-muted"
-                  >Diese Email wird nicht an Dritte weitergegeben.</small
-                >
-              </div>
-              <div class="form-group mb-3">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name" required />
-              </div>
-              <div class="form-group mb-3">
-                <label for="message">Nachricht</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  placeholder="Nachricht"
-                  required
-                ></textarea>
-              </div>
-              <div class="form-group form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" required />
-                <label class="form-check-label" for="exampleCheck1">Datenschutz akzeptieren</label>
-              </div>
-              <button type="submit" class="btn btn-outline-dark">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <FooterComponent />
-      </div>
-    </full-page>
-  </div>
-</template>

@@ -20,7 +20,7 @@ export default defineComponent({
     homelink(): void {
       this.$router.push('/');
     },
-    handleScroll(event) {
+    handleScroll(event: { deltaY: number; }) {
       // Check the direction of scroll
       if (event.deltaY > 0) {
         // Scrolling down
@@ -35,6 +35,7 @@ export default defineComponent({
     // Attach wheel event listener
     window.addEventListener('wheel', this.handleScroll);
   },
+  // eslint-disable-next-line vue/no-deprecated-destroyed-lifecycle
   destroyed() {
     // Remove wheel event listener when component is destroyed
     window.removeEventListener('wheel', this.handleScroll);

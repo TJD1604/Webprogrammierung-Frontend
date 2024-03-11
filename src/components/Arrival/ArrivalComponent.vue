@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="arrival-div">
-          <GoogleMap :apiKey="googleMapsApiKey" :center="center" :zoom="15" style="width: 100%; height: 500px">
+          <GoogleMap :center="center" :zoom="15" style="width: 100%; height: 500px">
             <Marker :options="{ position: center }" />
           </GoogleMap>
         </div>
@@ -39,10 +39,9 @@ export default defineComponent({
   // eslint-disable-next-line vue/no-reserved-component-names
   components: { GoogleMap, Marker },
   setup() {
-    const googleMapsApiKey = "YOUR_GOOGLE_MAPS_API_KEY";
-    const center = { lat: 40.689247, lng: -74.044502 };
+    const center = { lat: 52.50839749187282, lng: 13.52722361724156 };
 
-    return { googleMapsApiKey, center };
+    return {center };
   },
 });
 </script>
