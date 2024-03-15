@@ -72,7 +72,7 @@ export default defineComponent({
                 destination="/kantine"
               />
             </div>
-            <div class="button-container">
+            <div class="button-container2">
               <div class="circle-background">
                 <div class="circle-content">
                   <h1 class="circle-title">Your Circle Title</h1>
@@ -90,6 +90,7 @@ export default defineComponent({
           </div>
         </div>
         <div class="section">
+        
           <FooterComponent />
         </div>
       </full-page>
@@ -97,9 +98,11 @@ export default defineComponent({
   </div>
 </template>
 <style scoped>
+
 .circle-background {
   position: absolute;
-  margin-left: 10px;
+  margin-left: 0px;
+  justify-self: flex-start;
 
   padding-top: 20px;
   width: 500px; /* Adjust the size of your circle */
@@ -116,9 +119,7 @@ export default defineComponent({
 
 .circle-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   text-align: center;
   color: #fff; /* Adjust the color of your text */
 }

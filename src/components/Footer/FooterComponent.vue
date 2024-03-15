@@ -1,100 +1,68 @@
 <template>
-  <!-- Footer -->
-  <MDBFooter :text="['center', 'lg-start', 'muted']">
-    <!-- Section: Links  -->
-    <section class="">
-      <MDBContainer class="text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <MDBRow class="mt-3">
-          <!-- Grid column -->
-          <MDBCol md="3" lg="4" xl="3" class="mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Solidarity Studio
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit.
-            </p>
-          </MDBCol>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <MDBCol md="2" lg="2" xl="2" class="mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Products</h6>
-            <p>
-              <a href="#!" class="text-reset">Angular</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">React</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Vue</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Laravel</a>
-            </p>
-          </MDBCol>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <MDBCol md="3" lg="2" xl="2" class="mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
-            <p>
-              <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
-            </p>
-          </MDBCol>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <MDBCol md="4" lg="3" xl="3" class="mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p>
-              <i class="fas fa-home me-3"></i> New York, NY 10012, US
-            </p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              info@example.com
-            </p>
-            <p>
-              <MDBIcon icon="phone" class="me-3" /> + 01 234 567 88
-            </p>
-            <p>
-              <MDBIcon icon="print" class="me-3" /> + 01 234 567 89
-            </p>
-          </MDBCol>
-          <!-- Grid column -->
-        </MDBRow>
-        <!-- Grid row -->
-      </MDBContainer>
-    </section>
-    <!-- Section: Links  -->
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+<img
+                  src="/footer.png"
+                  class="footer-image"
+                />
+<footer style="background-color: #0F0F0F;">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <h5 class="text-uppercase fw-bold mb-4" style="color: #E3CAAB;">Solidarity Studio</h5>
+          <p style="color: white;">
+            Solidarity Studio steht im Herzen unserer Gemeinschaft, als ein leuchtendes Beispiel für die Kraft der Kunst, Veränderungen zu bewirken. 
+            Seit unserer Gründung haben wir es uns zur Aufgabe gemacht, durch die Schönheit der Kunst eine Brücke des Mitgefühls und der Unterstützung zu bauen. 
+            Jedes Kunstwerk in unserer Galerie erzählt eine Geschichte von Hoffnung, Widerstandskraft und Solidarität. 
+            Treten Sie uns bei auf dieser Reise der Kunst und des Mitgefühls.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase fw-bold mb-4" style="color: #E3CAAB;">links</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-1">
+              <a href="/aboutUs" style="color: white;">Über Uns</a>
+            </li>
+            <li class="mb-1">
+              <a href="/anreise" style="color: white;">Anreise</a>
+            </li>
+            <li class="mb-1">
+              <a href="/kontakt" style="color: white;">Kontakt</a>
+            </li>
+            <li>
+              <a href="/impressum" style="color:white;">Impressum</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="text-uppercase fw-bold mb-4" style="color: #E3CAAB;">Öffnungszeiten</h5>
+          <table class="table" style="border-color: #666;">
+            <tbody>
+              <tr>
+                <td>Mo - Do:</td>
+                <td>10 Uhr - 16 Uhr</td>
+              </tr>
+              <tr>
+                <td>Fr - So: </td>
+                <td>17 Uhr - 22 Uhr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: #E3CAAB;">
       © 2024 Copyright:
       <a class="text-reset fw-bold" href="/">Solidarity Studio</a>
     </div>
     <!-- Copyright -->
-  </MDBFooter>
-  <!-- Footer -->
+  </footer>
 </template>
 
-<script setup lang="ts">
-  import {
-    MDBFooter,
-    MDBContainer,
-    MDBRow,
-    MDBCol,
-    MDBIcon
-  } from 'mdb-vue-ui-kit';
-</script>
+
+<style>
+.footer-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover; 
+  margin-bottom: 0px;
+}
+</style>
