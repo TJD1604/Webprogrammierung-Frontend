@@ -22,7 +22,7 @@ export default defineComponent({
     <HeaderLineComponent class="position-absolute top-0"/>
   </div>
   <CookieConsent 
-    message="Wir backen nicht nur Cookies in unsere Kantine, sondern auch auf unserer Webseite."
+    message="Wir backen nicht nur Cookies in unserer Kantine, sondern auch auf unserer Webseite."
     linkLabel="Erfahre mehr"
     href="/datenschutz"
     target="_blank"
