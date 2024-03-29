@@ -3,7 +3,7 @@ import { defineComponent } from "vue";
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 
 import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
-import '../view.css'
+import './MitarbeitendeView.css'
 export default defineComponent({
   name: "MitarbeitendeView",
   components: {
@@ -34,7 +34,34 @@ export default defineComponent({
         </div>
       </div>
       <div class="section">
-        <div class="content-inner"></div>
+        <div class="content-inner">
+
+          <div class="image-container">
+            <div class="image">
+              <img src="/images/MitarbeitendeIconH.png" alt="Image 1">
+              <ul class="underline">
+                <li>Hackebeil</li>
+                <router-link to="/mitarbeitende-detail" class="link">erfahre mehr</router-link>
+              </ul>
+            </div>
+            <div class="image">
+              <img src="/images/MitarbeitendeIconP.png" alt="Image 2">
+              <ul class="underline">
+                <li>Padmoon</li>
+                <router-link to="/mitarbeitende-detail" class="link">erfahre mehr</router-link>
+              </ul>
+            </div>
+            <div class="image">
+              <img src="/images/MitarbeitendeIconJ.png" alt="Image 3">
+              <ul class="underline">
+                <li>Janana</li>
+                <router-link to="/mitarbeitende-detail" class="link">erfahre mehr</router-link>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
       </div>
       <div class="section">
         <FooterComponent />
