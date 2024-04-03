@@ -83,7 +83,6 @@
   font-size: 20px;
   color: #fff; 
   text-decoration: none; 
-  cursor: pointer; 
   padding: 5px 10px;
   border-radius: 10px;
   animation: bounce 0.5s infinite alternate; /* Hinzufügen der Animation */
@@ -99,8 +98,4 @@
   100% {
       transform: translateY(0); 
   }
-}
-.scroll-down-arrow:hover {
-  
-  background-color: rgba(210, 184, 157, 0.5);
 }

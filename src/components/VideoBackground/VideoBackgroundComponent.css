@@ -42,3 +42,28 @@
   height: 150px; 
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.0) 100%);
 }
+
+.scroll-down-arrow {
+  position: absolute;
+  font-family: Dubai;
+
+  bottom: 20px;
+  left: 50%; 
+  font-size: 20px;
+  color: #fff; 
+  text-decoration: none; 
+  padding: 5px 10px;
+  animation: bounce 0.5s infinite alternate; /* Hinzufügen der Animation */
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0); 
+  }
+  50% {
+      transform: translateY(6px); 
+  }
+  100% {
+      transform: translateY(0); 
+  }
+}
