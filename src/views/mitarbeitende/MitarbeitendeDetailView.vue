@@ -16,7 +16,8 @@ export default defineComponent({
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['1', '2', '3']
+        anchors:['Header','Tina','Jana','Tim','Footer'],
+        navigationTooltips: ['1', '2', '3', '4','5']
       },
       imagePath: 'images/DetailsMitarbeitende.JPG',
       title: 'Mitarbeitende im Detail'
@@ -32,7 +33,13 @@ export default defineComponent({
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
-      <div class="section">
+      <div class="section" anchor="Tina">
+        <div class="content-inner"></div>
+      </div>
+      <div class="section" anchor="Jana">
+        <div class="content-inner"></div>
+      </div>
+      <div class="section" anchor="Tim">
         <div class="content-inner"></div>
       </div>
       <div class="section">

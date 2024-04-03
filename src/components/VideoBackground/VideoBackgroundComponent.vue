@@ -7,7 +7,7 @@
       ></video-background>
       <div class="vid-bottom">
         <h1 class="slogan">Inspire<span class="dot">.</span> Create<span class="dot">.</span> Unite<span class="dot">.</span></h1>
-
+        <a v-if="showArrow" class="scroll-down-arrow">↓</a>
       </div>
     </div>
 
@@ -27,8 +27,15 @@ export default defineComponent({
   },
   data() {
     return {
-      videoPath: '/webvideoFinal.mp4'
-    }
-  }
+      videoPath: '/webvideoFinal.mp4',
+      showArrow: false,
+      timeoutId: null
+    };
+  },
+  mounted() {
+    this.timeoutId = setTimeout(() => {
+      this.showArrow = true;
+    }, 2000);
+  },
 })
 </script>
