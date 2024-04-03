@@ -73,18 +73,20 @@ export default defineComponent({
               />
             </div>
             <div class="button-container2">
-              <div class="circle-background">
-                <div class="circle-content">
-                  <h1 class="circle-title">Your Circle Title</h1>
-                  <p class="circle-info-text">Your Circle Info Text</p>
-                </div>
-              </div>
               <div>
                 <img
-                  src="/images/Weiterbildung.jpg"
+                  src="/slogan.png"
                   alt="Description of your image"
                   class="right-image"
                 />
+              </div>
+              <div class="circle-background">
+                <div class="circle-content">
+                  
+                  <p><em>"Wir wollen durch inspirierende Kunstwerke Menschen dazu ermutigen, ihre Kreativität zu entfalten und gleichzeitig eine Gemeinschaft zu schaffen, die sich für das Wohl anderer einsetzt." </em><br><br>- Kristina Rubin, Head of Marketing </p>
+                  
+                </div>
+                
               </div>
             </div>
           </div>
@@ -100,38 +102,31 @@ export default defineComponent({
 <style scoped>
 
 .circle-background {
-  position: absolute;
-  margin-left: 0px;
-  justify-self: flex-start;
-
-  padding-top: 20px;
-  width: 500px; /* Adjust the size of your circle */
-  height: 500px; /* Adjust the size of your circle */
+  position: relative;
+  width: 600px; /* Adjust the size of your circle */
+  height: 400px; /* Adjust the size of your circle */
   background-color: rgb(210, 184, 157);
-  border-radius: 50%;
+  display:flex;
 }
 
 .right-image {
   position: relative;
-  width: 500px; /* Adjust the size of your image */
-  height: auto; /* Adjust the size of your image */
+  width: 500px;
+  height: 400px;
+  object-fit: cover; 
 }
 
 .circle-content {
-  position: absolute;
+  display:flex;
+  padding: 40px 40px;
 
+  align-self: center;
+  justify-self: center;
+  text-align: left;
+  margin-top: 20px;
+  color: #fff;
   text-align: center;
-  color: #fff; /* Adjust the color of your text */
 }
 
-.circle-title {
-  font-size: 24px; /* Adjust the font size of your title */
-  margin-bottom: 10px;
-}
-
-.circle-info-text {
-  font-size: 16px; /* Adjust the font size of your info text */
-  margin-bottom: 0;
-}
 
 </style>

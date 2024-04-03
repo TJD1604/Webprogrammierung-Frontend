@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="collage">
+    <p class="slide-info"> <b>Slide Me!</b></p>
     <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
       <Slide v-for="(image, index) in images" :key="index">
         <img :src="image" class="carousel__item" alt="Slide" @click="openLightbox">
@@ -96,5 +97,11 @@ export default defineComponent({
 .carousel__thumbnail {
   max-height: 200px;
   width: 90%;
+}
+.collage{
+ padding-bottom: 20px;
+}
+.slide-info{
+  text-align: center;
 }
 </style>
