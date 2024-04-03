@@ -10,8 +10,8 @@
         <div class="content-inner">
           <MenuCardComponent/>
           <!-- Infobox für Besucherinformationen -->
-          <div class="infobox-container">
-            <div class="infobox bg-light p-4 rounded mt-5" style="width: 75%;">
+          <div class="infobox-container" style="width: 100%;">
+            <div class="infobox bg-light p-4 rounded mt-5">
               <h3 class="mb-2">Besucherinformationen</h3>
               <p class="mb-1">Studierende und Ehrenamtliche erhalten 3€ Rabatt.</p>
               <p class="mb-0">Kinder können Kinderportionen bekommen, diese kosten die Hälfte.</p>
@@ -56,11 +56,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.infobox-container {
-  display: flex;
-  justify-content: center;
-}
-
 .infobox {
   font-size: 0.9rem;
 }

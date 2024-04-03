@@ -1,69 +1,5 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  props: {
-    imagePath: String,
-    title: String
-  },
-  data() {
-    return {
-      week: [
-        { 
-          name: "Montag", 
-          meals: [
-            { name: "Frühstück", description: "Müsli mit frischen Früchten", price: "5€", availableFrom: "10:00", availableUntil: "12:00" },
-            { name: "Mittagessen", description: "Gemüsesuppe mit Brot", price: "8€", availableFrom: "12:00", availableUntil: "15:00" },
-          ]
-        },
-        { 
-          name: "Dienstag", 
-          meals: [
-            { name: "Frühstück", description: "Toast mit Marmelade", price: "4€", availableFrom: "10:00", availableUntil: "12:00" },
-            { name: "Mittagessen", description: "Hähnchenbrust mit Reis und Gemüse", price: "9€", availableFrom: "12:00", availableUntil: "15:00" },
-          ]
-        },
-        { 
-          name: "Mittwoch", 
-          meals: [
-            { name: "Frühstück", description: "Joghurt mit Müsli und Honig", price: "6€", availableFrom: "10:00", availableUntil: "12:00" },
-            { name: "Mittagessen", description: "Lasagne mit Knoblauchbrot", price: "11€", availableFrom: "12:00", availableUntil: "15:00" },
-          ]
-        },
-        { 
-          name: "Donnerstag", 
-          meals: [
-            { name: "Frühstück", description: "Porridge mit Beeren", price: "5€", availableFrom: "10:00", availableUntil: "12:00" },
-            { name: "Mittagessen", description: "Gebratenes Fischfilet mit Kartoffeln", price: "12€", availableFrom: "12:00", availableUntil: "15:00" },
-          ]
-        },
-        { 
-          name: "Freitag", 
-          meals: [
-            { name: "Abendessen", description: "Sushi-Platte mit Miso-Suppe", price: "15€", availableFrom: "17:00", availableUntil: "21:00" }
-          ]
-        },
-        { 
-          name: "Samstag", 
-          meals: [
-            { name: "Abendessen", description: "Gemüsecurry mit Basmatireis", price: "8€", availableFrom: "17:00", availableUntil: "21:00" }
-          ]
-        },
-        { 
-          name: "Sonntag", 
-          meals: [
-            { name: "Abendessen", description: "Tomatensuppe mit Baguette", price: "6€", availableFrom: "17:00", availableUntil: "21:00" }
-          ]
-        }
-      ],
-      currentDayIndex: (new Date()).getDay() - 1
-    };
-  }
-})
-</script>
-
 <template>
-    <div class="container">
+    <div v-if="week.length > 0" class="container">
       <h2>Speiseplan für die Woche</h2>
       <div class="row">
         <!-- Render Montag bis Donnerstag -->
@@ -98,10 +34,92 @@ export default defineComponent({
         </div>
       </div>
     </div>
+    <div v-else>
+      <p>Loading...</p>
+    </div>
   </template>
-
-<style scoped>
-.highlighted {
-  background-color: bisque;
+  
+  <script lang="ts">
+  import { defineComponent } from 'vue'
+  
+  interface Meal {
+    name: string;
+    description: string;
+    price: string;
+    availableFrom: string;
+    availableUntil: string;
+  }
+  
+  export default defineComponent({
+    props: {
+      imagePath: String,
+      title: String
+    },
+    data() {
+      return {
+        week: [] as { name: string, meals: Meal[] }[],
+        currentDayIndex: (new Date()).getDay() - 1
+      };
+    },
+    mounted() {
+      this.getMenu();
+    },
+    methods: {
+  async getMenu() {
+    try {
+      const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:zL769PHt/speisekarte', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const data = await response.json();
+      
+      if (Array.isArray(data)) {
+        // Gruppieren Sie die Mahlzeiten nach Tag
+        const groupedData = data.reduce((acc: any, current: any) => {
+          if (!current.name) {
+            // Wenn kein Name vorhanden ist, fügen Sie die Mahlzeit zum vorherigen Tag hinzu
+            const lastIndex = acc.length - 1;
+            acc[lastIndex].meals.push({
+              name: current.meals__name,
+              description: current.meals__description,
+              price: current.meals__price,
+              availableFrom: current.meals__availableFrom,
+              availableUntil: current.meals__availableUntil
+            });
+          } else {
+            // Wenn ein Name vorhanden ist, fügen Sie einen neuen Tag hinzu
+            acc.push({
+              name: current.name,
+              meals: [{
+                name: current.meals__name,
+                description: current.meals__description,
+                price: current.meals__price,
+                availableFrom: current.meals__availableFrom,
+                availableUntil: current.meals__availableUntil
+              }]
+            });
+          }
+          return acc;
+        }, []);
+        
+        this.week = groupedData;
+      } else {
+        console.error('Data is not in the expected format:', data);
+      }
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
+  }
 }
-</style>
+
+  })
+  </script>
+  
+  <style scoped>
+  .highlighted {
+    background-color: bisque;
+  }
+  </style>
+  

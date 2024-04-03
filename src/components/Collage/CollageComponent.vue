@@ -1,6 +1,6 @@
 <template>
   <div class="collage">
-    <p class="slide-info"> <b>Slide Me!</b></p>
+    <p class="slide-info"><b>Slide Me!</b></p>
     <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
       <Slide v-for="(image, index) in images" :key="index">
         <img :src="image.src" class="carousel__item" alt="Slide" @click="openLightbox">
@@ -19,21 +19,23 @@
       </Slide>
     </Carousel>
 
-    <lightbox-component
-      :show-lightbox="showLightbox"
-      :current-slide="currentSlide"
-      :images="images"
-      @close-lightbox="closeLightbox"
-    />
+    <template v-if="images.length > 0">
+      <lightbox-component
+        :show-lightbox="showLightbox"
+        :current-slide="currentSlide"
+        :images="images"
+        @close-lightbox="closeLightbox"
+      />
+    </template>
   </div>
 </template>
+
 
 <script>
 import { defineComponent } from 'vue'
 import { Carousel, Slide } from 'vue3-carousel'
 import LightboxComponent from './LightboxComponent.vue'
 
-import imagesData from './images.json';
 import 'vue3-carousel/dist/carousel.css'
 
 export default defineComponent({
@@ -43,12 +45,31 @@ export default defineComponent({
     Slide,
     LightboxComponent
   },
-  data: () => ({
-    currentSlide: 0,
-    images: imagesData ,
-    showLightbox: false,
-  }),
+  data() {
+    return {
+      currentSlide: 0,
+      images: [],
+      showLightbox: false
+    };
+  },
+  mounted() {
+    this.fetchImages();
+  },
   methods: {
+    async fetchImages() {
+      try {
+        const response = await fetch('https://x8ki-letl-twmt.n7.xano.io/api:AJ7FqWLv/images', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        const data = await response.json();
+        this.images = data.map(image => ({ src: image.src, title: image.title, artist: image.artist, ort: image.ort, info: image.info }));
+      } catch (error) {
+        console.error('Error fetching images:', error);
+      }
+    },
     slideTo(index) {
       this.currentSlide = index;
     },
@@ -57,8 +78,8 @@ export default defineComponent({
     },
     closeLightbox() {
       this.showLightbox = false;
-    },
-  },
+    }
+  }
 })
 </script>
 
