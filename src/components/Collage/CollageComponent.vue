@@ -3,7 +3,7 @@
     <p class="slide-info"> <b>Slide Me!</b></p>
     <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
       <Slide v-for="(image, index) in images" :key="index">
-        <img :src="image" class="carousel__item" alt="Slide" @click="openLightbox">
+        <img :src="image.src" class="carousel__item" alt="Slide" @click="openLightbox">
       </Slide>
     </Carousel>
 
@@ -15,7 +15,7 @@
       ref="carousel"
     >
       <Slide v-for="(image, index) in images" :key="index">
-        <img :src="image" class="carousel__thumbnail" alt="Thumbnail" @click="slideTo(index)">
+        <img :src="image.src" class="carousel__thumbnail" alt="Thumbnail" @click="slideTo(index)">
       </Slide>
     </Carousel>
 
@@ -24,7 +24,7 @@
       :current-slide="currentSlide"
       :images="images"
       @close-lightbox="closeLightbox"
-    ></lightbox-component>
+    />
   </div>
 </template>
 
@@ -33,6 +33,7 @@ import { defineComponent } from 'vue'
 import { Carousel, Slide } from 'vue3-carousel'
 import LightboxComponent from './LightboxComponent.vue'
 
+import imagesData from './images.json';
 import 'vue3-carousel/dist/carousel.css'
 
 export default defineComponent({
@@ -40,34 +41,11 @@ export default defineComponent({
   components: {
     Carousel,
     Slide,
-    LightboxComponent,
+    LightboxComponent
   },
   data: () => ({
     currentSlide: 0,
-    images: [
-      '/images/Datenschutz.jpg',
-      '/images/DetailsJobangebote.jpg',
-      '/images/DetailsMitarbeitende.JPG',
-      '/images/DetailsPartnerinnen.jpg',
-      '/images/DetailWeiterbildung.JPG',
-      '/images/DetailsProdukte.jpg',
-      '/images/DetailsSpendenprojekte.jpg',
-      '/images/Geschichte.jpg',
-      '/images/Impressum.jpg',
-      '/images/Jobangebote.JPG',
-      '/images/Kantine.jpg',
-      '/images/Karriere.JPG',
-      '/images/Kontakt.JPG',
-      '/images/Mitarbeitende.JPG',
-      '/images/Partnerinnen.JPG',
-      '/images/Produkte_Künstlerin.jpg',
-      '/images/Produkte.JPG',
-      '/images/Spendenprojekete.jpg',
-      '/images/ÜberUnsZiele.JPG',
-      '/images/Weiterbildung.jpg',
-      '/images/Wettbewerbe.JPG',
-      '/images/CookieRichtlinien.JPG'
-    ],
+    images: imagesData ,
     showLightbox: false,
   }),
   methods: {
