@@ -36,7 +36,7 @@ export default defineComponent({
         </div>
       </div>
       <div class="section">
-        <div class="content-inner">
+        <div>
           <h2 class="h2">Duetto cittadino antico</h2>
           <p class="info-text">
             Willkommen in unserer Galerie des antiken städtischen Duettos! Tauchen Sie ein in die

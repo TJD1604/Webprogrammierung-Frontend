@@ -78,4 +78,12 @@ h1,h2,h3,h4,h5,h6{
   background-color: #2f2f2fe1;
 }
 
+.content-inner {
+  width: 80% !important; /* Maximal 80% der Bildschirmbreite einnehmen */
+  margin: 0 auto !important; /* Horizontal zentrieren */
+  display: flex !important;
+  justify-content: center !important; /* Horizontal zentrieren */
+  align-items: center !important; /* Vertikal zentrieren */
+}
+
 </style>
