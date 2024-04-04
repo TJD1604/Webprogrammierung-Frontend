@@ -71,8 +71,7 @@ export default defineComponent({
         { title: 'Partner:innen im Detail', link: '/partnerinnen-detail' }
       ]},
       { title: 'Karriere', link: '/karriere', subItems: [
-        { title: 'Jobangebote', link: '/job' },
-        { title: 'Jobangebote im Detail', link: '/job-details' }
+        { title: 'Jobangebote', link: '/job' }
       ]},
       { title: 'Weiterbildungen', link: '/weiterbildungen', subItems: [
         { title: 'Weiterbildungen im Detail', link: '/weiterbildungen-detail' }
