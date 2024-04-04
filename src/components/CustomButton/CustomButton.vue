@@ -98,4 +98,4 @@ export default {
   height: 80px; /* Höhe des Schattens */
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Gradient von Schwarz nach transparent */
 }
-</style>: { currentTarget: { querySelector: (arg0: string) => { (): any; new(): any; style: { (): any; new(): any; transform: string; }; }; }; }: { currentTarget: { querySelector: (arg0: string) => { (): any; new(): any; style: { (): any; new(): any; transform: string; }; }; }; }: { target: { classList: { add: (arg0: string) => void; }; }; }: { target: { classList: { remove: (arg0: string) => void; }; }; }
+</style>

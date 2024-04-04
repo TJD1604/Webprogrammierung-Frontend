@@ -16,7 +16,8 @@ export default defineComponent({
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['1', '2', '3']
+        anchors:['Header','Porsche','BerlinerStadtwerke','SAP','Gucci','Footer'],
+        navigationTooltips: ['1', '2', '3', '4','5','6']
       },
       imagePath: 'images/DetailsPartnerinnen.jpg',
       title: 'Partner:innen im Detail'
@@ -33,7 +34,16 @@ export default defineComponent({
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
-      <div class="section">
+      <div class="section" anchor="Porsche">
+        <div class="content-inner"></div>
+      </div>
+      <div class="section" anchor="BerlinerStadtwerke">
+        <div class="content-inner"></div>
+      </div>
+      <div class="section" anchor="SAP">
+        <div class="content-inner"></div>
+      </div>
+      <div class="section" anchor="Gucci">
         <div class="content-inner"></div>
       </div>
       <div class="section">
