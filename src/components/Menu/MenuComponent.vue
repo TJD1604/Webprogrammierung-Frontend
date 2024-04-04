@@ -64,7 +64,7 @@ export default defineComponent({
         { title: 'Unsere Spendenprojekte im Detail', link: '/spendenprojekte-detail' }
       ]},
       { title: 'Produkte', link: '/produkte', subItems: [
-        { title: 'Produkte - Künstler:innen', link: '/produkte-artist' },
+        { title: 'Aktuelle Künstlerin', link: '/produkte-artist' },
         { title: 'Unsere Produkte im Detail', link: '/produkte-detail' }
       ]},
       { title: 'Partner:innen', link: '/partnerinnen', subItems: [
