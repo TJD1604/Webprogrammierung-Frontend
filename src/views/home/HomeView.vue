@@ -72,7 +72,7 @@ export default defineComponent({
                 destination="/kantine"
               />
             </div>
-            <div class="button-container2">
+            <div class="button-container">
               <div>
                 <img
                   src="/slogan.png"
