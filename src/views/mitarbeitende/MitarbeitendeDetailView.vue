@@ -1,14 +1,15 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
-
+import EmployeesComponent from '@/components/Employees/EmployeesComponent.vue'
 import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
 import '../view.css'
 export default defineComponent({
   name: "MitarbeitendeDetailView",
   components: {
     FooterComponent,
-    PicBackgroundComponent
+    PicBackgroundComponent,
+    EmployeesComponent
   },
   data() {
     return {
@@ -16,7 +17,7 @@ export default defineComponent({
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
-        anchors:['Header','Tina','Jana','Tim','Footer'],
+        anchors:['Header','Padmoon','Janana','Hackebeil','Footer'],
         navigationTooltips: ['1', '2', '3', '4','5']
       },
       imagePath: 'images/DetailsMitarbeitende.JPG',
@@ -33,14 +34,20 @@ export default defineComponent({
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
-      <div class="section" anchor="Tina">
-        <div class="content-inner"></div>
+      <div class="section" :anchor="options.anchors[1]">
+        <div class="content-inner">
+          <EmployeesComponent :employeeName="options.anchors[1]" />
+        </div>
       </div>
-      <div class="section" anchor="Jana">
-        <div class="content-inner"></div>
+      <div class="section" :anchor="options.anchors[2]">
+        <div class="content-inner">
+          <EmployeesComponent :employeeName="options.anchors[2]" />
+        </div>
       </div>
-      <div class="section" anchor="Tim">
-        <div class="content-inner"></div>
+      <div class="section" :anchor="options.anchors[3]">
+        <div class="content-inner">
+          <EmployeesComponent :employeeName="options.anchors[3]" />
+        </div>
       </div>
       <div class="section">
         <FooterComponent />
