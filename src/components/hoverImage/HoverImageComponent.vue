@@ -29,9 +29,9 @@
 
 .image {
   opacity: 1;
-  display: block;
-  width: 100%;
+  width: 150px;
   height: auto;
+  object-fit: cover; 
   transition: .5s ease;
   backface-visibility: hidden;
 }

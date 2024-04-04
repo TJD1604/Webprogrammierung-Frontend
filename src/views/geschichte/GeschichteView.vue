@@ -35,7 +35,10 @@ export default defineComponent({
         </div>
       </div>
       <div class="section">
-        <div class="content-inner"></div>
+        <div class="content-inner">
+
+          
+        </div>
       </div>
       <div class="section">
         <FooterComponent />
