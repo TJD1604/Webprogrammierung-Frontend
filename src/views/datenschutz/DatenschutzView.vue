@@ -36,7 +36,7 @@ export default defineComponent({
         </div>
       </div>
       <div class="section">
-        <div class="content-inner">
+        <div class="">
           <div class="textdev">
             <h4>Allgemeiner Hinweis und Pflichtinformationen</h4>
             <h5>Benennung der verantwortlichen Stelle</h5>

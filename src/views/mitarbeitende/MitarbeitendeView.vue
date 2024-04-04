@@ -41,21 +41,21 @@ export default defineComponent({
               <img src="/images/MitarbeitendeIconH.png" alt="Image 1">
               <ul class="underline">
                 <li>Hackebeil</li>
-                <router-link to="/mitarbeitende-detail#Tim" class="link">erfahre mehr</router-link>
+                <router-link to="/mitarbeitende-detail#Hackebeil" class="link">erfahre mehr</router-link>
               </ul>
             </div>
             <div class="image">
               <img src="/images/MitarbeitendeIconP.png" alt="Image 2">
               <ul class="underline">
                 <li>Padmoon</li>
-                <router-link to="/mitarbeitende-detail#Tina" class="link">erfahre mehr</router-link>
+                <router-link to="/mitarbeitende-detail#Padmoon" class="link">erfahre mehr</router-link>
               </ul>
             </div>
             <div class="image">
               <img src="/images/MitarbeitendeIconJ.png" alt="Image 3">
               <ul class="underline">
                 <li>Janana</li>
-                <router-link to="/mitarbeitende-detail#Jana" class="link">erfahre mehr</router-link>
+                <router-link to="/mitarbeitende-detail#Janana" class="link">erfahre mehr</router-link>
               </ul>
             </div>
           </div>
