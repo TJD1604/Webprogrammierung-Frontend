@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import FooterComponent from '@/components/Footer/FooterComponent.vue'
-
+import FooterComponent from '@/components/Footer/FooterComponent.vue';
+import TimelineComponent from '@/components/Timeline/TimelineComponent.vue';
 import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
 import '../view.css'
 
@@ -9,6 +9,7 @@ export default defineComponent({
   name: "GeschichteView",
   components: {
     FooterComponent,
+    TimelineComponent,
     PicBackgroundComponent
   },
   data() {
@@ -36,6 +37,11 @@ export default defineComponent({
       </div>
       <div class="section">
         <div class="content-inner">
+          <div class="button-container">
+            <h2 class="h2">Unser Zeitstrahl</h2>
+          </div>
+          
+          <TimelineComponent />
 
           
         </div>
