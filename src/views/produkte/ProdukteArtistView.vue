@@ -40,8 +40,11 @@ export default defineComponent({
           <div class="button-container">
             <div class="artist-text">
               <h2 class="h2">Janana</h2>
+              <p class="age">
+               <b>Alter:</b>  20
+              </p>
               <p><b>Janana, eine leidenschaftliche Fotografin aus Berlin, ist bekannt für ihre fesselnden
-                  Streetfotografien.</b> Schon seit ihrer Kindheit ist sie von der Kunst der Fotografie fasziniert und
+                  Streetfotografien.</b> <br> Schon seit ihrer Kindheit ist sie von der Kunst der Fotografie fasziniert und
                 hat sich im Laufe der Jahre zu einer talentierten Künstlerin entwickelt. Mit nur 20 Jahren hat sie
                 bereits einen beeindruckenden Stil entwickelt und ihre Arbeit wurde von vielen bewundert. Janana liebt
                 es, die pulsierende Energie der Straßen Berlins einzufangen und ihre Fotos erzählen oft fesselnde
@@ -72,5 +75,8 @@ export default defineComponent({
     width: 500px;
     height: 333px;
     object-fit: cover;
+  }
+  .age{
+    margin: 0;
   }
 </style>
