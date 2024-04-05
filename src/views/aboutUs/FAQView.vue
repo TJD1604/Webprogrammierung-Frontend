@@ -44,7 +44,7 @@ export default defineComponent({
             <h2 class="h2">Häufig gestellte Fragen</h2>
           </div>
           <div class="button-container">
-            
+            <FAQComponent/>
           </div>
         </div>
       </div>
