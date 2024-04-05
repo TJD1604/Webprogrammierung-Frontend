@@ -1,12 +1,10 @@
 .content {
     position: relative;
     z-index: 1;
-    padding-top: 100vh;
   }
   
   .content-inner {
     padding: 20px;
-    height: 100vh;
     background-color: rgb(255, 255, 255);
     border-top: 1px solid #ccc;
     display: flex;
@@ -14,25 +12,12 @@
     justify-items: center;
   }
   
-  /* Anpassen der Scrollleiste */
-  .content-inner::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  .content-inner::-webkit-scrollbar-thumb {
-    background-color:  rgb(210, 184, 157);
-    border-radius: 5px;
-  }
-  
-  .content-inner::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(210, 184, 157);
-  }
-  
   .content-inner h2 {
     text-align: left;
     font-size: 50px; 
     font-family: 'Lucida Sans';
   }
+
   .button-container {
     display: flex;
     justify-content: space-between;
@@ -41,11 +26,13 @@
     width: 90vw;
 
     align-self: center;
+    justify-self: center;
     padding: 20px 0px; 
-
   }
-  
-  
+ .text-container{
+    text-align: left;  
+    width: 90vw;
+  }
   .info-text{
     text-align: left;
     margin-top: 20px;  

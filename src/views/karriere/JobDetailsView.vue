@@ -49,7 +49,7 @@ export default defineComponent({
         navigationTooltips: ['1', '2', '3']
       },
       imagePath: '../images/DetailsJobangebote.jpg',
-      title: 'Jobangebote im Detail',
+      title: 'Jobangebot im Detail',
       job: null // Initialisiere den Job mit null
     };
   },
