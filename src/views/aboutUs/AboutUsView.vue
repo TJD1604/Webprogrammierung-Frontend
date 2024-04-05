@@ -74,6 +74,11 @@ export default defineComponent({
                 imagePath="/images/Geschichte.jpg"
                 destination="/geschichte"
               />
+              <CustomButton
+                buttonText="FAQ"
+                imagePath="/images/FAQ.jpg"
+                destination="/faq"
+              />
             
             
           </div>

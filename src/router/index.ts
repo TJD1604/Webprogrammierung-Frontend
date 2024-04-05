@@ -6,6 +6,7 @@ import AboutUsView from "@/views/aboutUs/AboutUsView.vue";
 import AuszeichnungenView from "@/views/aboutUs/AuszeichnungenView.vue"; 
 import DatenschutzView from "@/views/datenschutz/DatenschutzView.vue";
 import GeschichteView from "@/views/geschichte/GeschichteView.vue";
+import FAQView from "@/views/aboutUs/FAQView.vue";
 import KantinenView from "@/views/kantine/KantinenView.vue";
 import AllergeneView from "@/views/kantine/AllergeneView.vue";
 import KarriereView from "@/views/karriere/KarriereView.vue";
@@ -47,6 +48,11 @@ const router = createRouter({
       path: "/aboutUs",
       name: "aboutUs",
       component: AboutUsView,
+    },
+    {
+      path: "/faq",
+      name: "faq",
+      component: FAQView,
     },
     {
       path: "/auszeichnungen",

@@ -55,7 +55,8 @@ export default defineComponent({
       { title: 'Home', link: '/' },
       { title: 'Über uns', link: '/aboutUs', subItems: [
         { title: 'Auszeichnungen', link: '/auszeichnungen' },
-        { title: 'Geschichte', link: '/geschichte' }
+        { title: 'Geschichte', link: '/geschichte' },
+        { title: 'FAQ', link: '/faq' }
       ]},
       { title: 'Mitarbeitende', link: '/mitarbeitende', subItems: [
         { title: 'Mitarbeitende im Detail', link: '/mitarbeitende-detail' }

@@ -36,8 +36,11 @@ export default defineComponent({
         </div>
       </div>
       <div class="section">
-        <div>
+        <div class="content-inner">
+        <div class="button-container">
           <h2 class="h2">Duetto cittadino antico</h2>
+        </div>
+        <div class="button-container">
           <p class="info-text">
             Willkommen in unserer Galerie des antiken städtischen Duettos! Tauchen Sie ein in die
             Vergangenheit und entdecken Sie die harmonische Melodie vergangener Zeiten, als die
@@ -47,9 +50,11 @@ export default defineComponent({
             Schönheit antiker Städte zu erleben, eingefangen in Momenten des Alltags und der
             Feierlichkeiten.
           </p>
-          <CollageComponent />
         </div>
+        <CollageComponent />
       </div>
+    </div>
+
       <div class="section">
         <FooterComponent />
       </div>
