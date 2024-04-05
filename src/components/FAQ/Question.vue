@@ -38,7 +38,7 @@
         </button>
       </header>
       <div :style="contentStyle" class="content">
-        <p :style="infoStyle" class="info">{{ info }}</p>
+        <p :style="infoStyle" class="info-faq">{{ info }}</p>
       </div>
     </article>
   </template>
@@ -123,7 +123,7 @@ export default {
     max-height: 0;
     transition: max-height 0.2s ease-out;
   }
-  .info {
+  .info-faq {
     z-index: -1;
     opacity: 0;
     transition: opacity 0.2s ease-out;
