@@ -43,7 +43,7 @@ export default defineComponent({
         // Extrahiere nur die benötigten Informationen für jeden Job
         this.jobList = response.data.map((job: any) => ({
           id: job.id,
-          iconPath: job.iconPath,
+          iconPath: "../../../images/job-offer.png",
           position: job.position,
           salary: job.gehalt
         }));
@@ -65,6 +65,7 @@ export default defineComponent({
       </div>
       <div class="section">
         <div class="content-inner">
+          <h2 style="align-self: self-start; margin-bottom: 10%;">Unsere aktuell verfügbaren Stellen</h2>
           <!-- Durchlaufe die jobList und übergebe die Daten an JoboverviewComponent -->
           
           <JoboverviewComponent  

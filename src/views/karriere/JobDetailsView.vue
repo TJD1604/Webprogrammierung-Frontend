@@ -9,15 +9,22 @@
       <div class="section">
         <div class="content-inner">
           <!-- Hier wird der gewählte Job angezeigt -->
-          <div v-if="job">
-            <h2>{{ job.position }}</h2>
-            <p>Bewerbungsfrist: {{ job.bewerbungsfrist }}</p>
-            <p>Aufgaben: {{ job.aufgaben }}</p>
-            <p>Anforderungen: {{ job.anforderungen }}</p>
-            <p>Gehalt: {{ job.gehalt }}</p>
-          </div>
-          <div v-else>
-            <p>Jobdetails werden geladen...</p>
+          <div class="row">
+            <div class="col-7">
+              <div v-if="job">
+                <h2>{{ job.position }}</h2>
+                <p>Bewerbungsfrist: {{ job.bewerbungsfrist }}</p>
+                <p>Aufgaben: {{ job.aufgaben }}</p>
+                <p>Anforderungen: {{ job.anforderungen }}</p>
+                <p>Gehalt: {{ job.gehalt }}</p>
+              </div>
+              <div v-else>
+                <p>Jobdetails werden geladen...</p>
+              </div>
+            </div>
+            <div class="col-3">
+              <img class="img-fluid" src="../../../images/employer.png"/>
+            </div>
           </div>
         </div>
       </div>
