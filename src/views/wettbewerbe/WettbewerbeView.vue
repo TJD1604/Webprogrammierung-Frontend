@@ -44,7 +44,7 @@ export default defineComponent({
     }
   },
   methods: {
-    onMousemove(e) {
+    onMousemove(e: { clientX: number }) {
       this.x = e.clientX
     }
   }
@@ -73,22 +73,8 @@ export default defineComponent({
                 unterstützenswerte Projekte. Sei dabei und lass uns zusammen Kunst für eine bessere
                 Zukunft schaffen
               </p>
-            </div>
-            <div>
-              <div
-                @mousemove="onMousemove"
-                :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }"
-                class="movearea"
-              >
-                <p class="stay-tuned">Mehr Wettbewerbe</p>
-                <h3 class="coming-soon">COMING SOON</h3>
-                <p class="stay-tuned">Hover Me</p>
-                
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="button-container" v-for="(item, index) in cards" :key="index">
+              <div class="row" style="align-self: self-start;">
+            <div class="button-container col mt-5"  v-for="(item, index) in cards" :key="index">
               <InfoCardComponent>
                 <template v-slot:front>
                   <div>
@@ -103,6 +89,20 @@ export default defineComponent({
               </InfoCardComponent>
             </div>
           </div>
+            </div>
+            <div class="mt-3" style="align-self: self-start;">
+              <div
+                @mousemove="onMousemove"
+                :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }"
+                class="movearea"
+              >
+                <p class="stay-tuned">Mehr Wettbewerbe</p>
+                <h3 class="coming-soon">COMING SOON</h3>
+                <p class="stay-tuned">Hover Me</p>
+                
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="section">
@@ -112,6 +112,7 @@ export default defineComponent({
   </div>
 </template>
 <style>
+
 .movearea {
   width: 250px;
   height: 250px;
