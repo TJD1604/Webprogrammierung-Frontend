@@ -16,7 +16,7 @@
             <div>
               <h2 class="h2">Wie man uns Erreicht</h2>
               <p class="info-text">
-                Hast du ein Anliegen, oder willst du uns Feedback da lassen? Schreib uns gerne
+                Hast du ein Anliegen, oder willst du uns Feedback da lassen? Schreib uns gerne:
               </p>
             </div>
           </div>
