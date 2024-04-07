@@ -34,27 +34,34 @@ export default defineComponent({
       </div>
       <div class="section">
         <div class="content-inner">
-
+          <div class="button-container">
+            <h2 class="h2">Mitarbeitende</h2>
+          </div>
+          <div class="button-container"><p>
+              <b>Lernen Sie unser Team kennen!</b> <br> Unsere Mitarbeitenden sind das Herzstück von Solidarity Studio. Jede*r
+              Einzelne bringt ihre/seine einzigartige Perspektive und Expertise ein, um eine bessere Welt zu gestalten. Erfahren
+              Sie mehr über die Menschen, die Solidarity Studio zu dem machen, was es ist.
+            </p></div>
           <div class="image-container">
             <div class="image">
               <img src="/images/MitarbeitendeIconH.png" alt="Image 1">
               <ul class="underline">
                 <li>Hackebeil</li>
-                <router-link to="/mitarbeitende-detail#Hackebeil" class="link">erfahre mehr</router-link>
+                <router-link to="/mitarbeitende-detail#Hackebeil" class="link">Erfahre mehr</router-link>
               </ul>
             </div>
             <div class="image">
               <img src="/images/MitarbeitendeIconP.png" alt="Image 2">
               <ul class="underline">
                 <li>Padmoon</li>
-                <router-link to="/mitarbeitende-detail#Padmoon" class="link">erfahre mehr</router-link>
+                <router-link to="/mitarbeitende-detail#Padmoon" class="link">Erfahre mehr</router-link>
               </ul>
             </div>
             <div class="image">
               <img src="/images/MitarbeitendeIconJ.png" alt="Image 3">
               <ul class="underline">
                 <li>Janana</li>
-                <router-link to="/mitarbeitende-detail#Janana" class="link">erfahre mehr</router-link>
+                <router-link to="/mitarbeitende-detail#Janana" class="link">Erfahre mehr</router-link>
               </ul>
             </div>
           </div>
@@ -80,7 +87,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
     width: 80%;
     margin: 0 auto;
     
