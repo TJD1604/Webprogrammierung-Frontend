@@ -1,23 +1,29 @@
 <script lang="ts">
+// Importing necessary components and styles
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import CharityComponent from '@/components/Charity/CharityComponent.vue'
 import { defineComponent } from 'vue'
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
 import '../view.css'
+
+// Exporting the component definition
 export default defineComponent({
-  name: 'SpendenprojekteDetailView',
+  name: 'SpendenprojekteDetailView', // Component name
   components: {
     FooterComponent,
     PicBackgroundComponent,
     CharityComponent
   },
+  // Data properties
   data() {
     return {
       options: {
+        // Options for full-page component
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
         anchors: [
+          // Anchors for navigation
           'Header',
           'Wasserenergie',
           'Bewegung',
@@ -29,8 +35,8 @@ export default defineComponent({
         ],
         navigationTooltips: ['1', '2', '3', '4', '5', '6', '7', '8']
       },
-
       charity: {
+        // Charity details
         titel: [
           'Quellen der Kraft',
           'Wegbereiter der Bewegung',
@@ -70,12 +76,15 @@ export default defineComponent({
 </script>
 <template>
   <div>
-    <full-page :options="options" >
+    <!-- Full-page component with options -->
+    <full-page :options="options">
+      <!-- Section 1: Background image -->
       <div class="section">
         <div class="position-relative">
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
+      <!-- Charity sections with anchors -->
       <div class="section" :anchor="options.anchors[0]">
         <div class="content-inner">
           <CharityComponent
@@ -136,7 +145,7 @@ export default defineComponent({
           />
         </div>
       </div>
-
+      <!-- Footer section -->
       <div class="section">
         <FooterComponent />
       </div>
