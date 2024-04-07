@@ -45,10 +45,6 @@ export default defineComponent({
           <div class="textdev">
              <!-- Privacy Policy -->
             <h4>Allgemeiner Hinweis und Pflichtinformationen</h4>
-            <h5>Benennung der verantwortlichen Stelle</h5><p>
-              Solidarity Studio <br />
-              Alt-Friedrichsfelde 60 <br />10315 Berlin
-            </p>
             <h2 class="subheading">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
             <p>Solidarity Studio<br />Alt-Friedrichsfelde 60, 10315 Berlin</p>
             <h2 class="subheading">Kontakt:</h2>
