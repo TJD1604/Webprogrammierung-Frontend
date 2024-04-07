@@ -117,9 +117,8 @@
   list-style-type: none;
 }
 
-.sub-item-0:hover {
-  transform: scale(1.05);
-}
-.sub-item-1:hover {
+.sub-item-0:hover,
+.sub-item-1:hover,
+.sub-item-2:hover {
   transform: scale(1.05);
 }
