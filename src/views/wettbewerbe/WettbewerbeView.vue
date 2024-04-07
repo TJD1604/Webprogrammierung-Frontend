@@ -1,14 +1,16 @@
 <script lang="ts">
-import { defineComponent } from "vue";
-import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
+import { defineComponent } from 'vue'
+import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
+import InfoCardComponent from '@/components/InfoCard/InfoCardComponent.vue'
 
 import '../view.css'
 export default defineComponent({
-  name: "WettbewerbeView",
+  name: 'WettbewerbeView',
   components: {
     FooterComponent,
-    PicBackgroundComponent
+    PicBackgroundComponent,
+    InfoCardComponent
   },
   data() {
     return {
@@ -19,10 +21,28 @@ export default defineComponent({
         navigationTooltips: ['1', '2', '3']
       },
       imagePath: 'images/Wettbewerbe.JPG',
-      title: 'Wettbewerbe'
-    };
+      title: 'Wettbewerbe',
+      cards: [
+        {
+          front: 'Malerei',
+          back: 'Farben, Pinsel, Leinwand: Kunst der visuellen Meisterwerke.'
+        },
+        {
+          front: 'Fotografie',
+          back: 'Erfasse Momente, erzähle Geschichten: Kreativität durch Linsen.'
+        },
+        {
+          front: 'Skulptur',
+          back: 'Formen formen: Kunst in dreidimensionaler Schönheit.'
+        },
+        {
+          front: 'Digitale Kunst',
+          back: 'Pixel malen, Klicks kreativ: Virtuelle Kreativität entfesseln.'
+        }
+      ]
+    }
   }
-});
+})
 </script>
 
 <template>
@@ -34,7 +54,45 @@ export default defineComponent({
         </div>
       </div>
       <div class="section">
-        <div class="content-inner"></div>
+        <div class="content-inner">
+          <div class="button-container">
+            <div>
+              <h2 class="h2">Einladung zum Charity-Kunstwettbewerb</h2>
+              <p>
+                Sei Teil einer inspirierenden Bewegung für den Wandel! Unsere Charity-Galerie lädt
+                Künstlerinnen und Künstler weltweit dazu ein, ihre kreativen Werke einzureichen und
+                gemeinsam eine positive Veränderung zu bewirken. Zeige uns deine Vision von
+                Hoffnung, Solidarität und Gemeinschaft und trage dazu bei, durch Kunst ein Licht in
+                die Welt zu bringen. Alle Einnahmen aus dem Wettbewerb fließen direkt in
+                unterstützenswerte Projekte. Sei dabei und lass uns zusammen Kunst für eine bessere
+                Zukunft schaffen
+              </p>
+            </div>
+            <div>
+              <div class="box">
+                <p class="stay-tuned">Mehr Wettbewerbe</p>
+                <h3 class="coming-soon">COMING SOON</h3>
+                <p class="stay-tuned">Stay Tuned</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="button-container" v-for="(item, index) in cards" :key="index">
+              <InfoCardComponent>
+                <template v-slot:front>
+                  <div>
+                    {{ item.front }}
+                  </div>
+                </template>
+                <template v-slot:back>
+                  <div>
+                    {{ item.back }}
+                  </div>
+                </template>
+              </InfoCardComponent>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="section">
         <FooterComponent />
@@ -42,3 +100,24 @@ export default defineComponent({
     </full-page>
   </div>
 </template>
+<style>
+.box {
+  width: 250px;
+  height: 250px;
+  border: 2px solid #d2b89d;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coming-soon {
+  text-align: center;
+}
+
+.info,
+.stay-tuned {
+  color: #d2b89d;
+}
+</style>
