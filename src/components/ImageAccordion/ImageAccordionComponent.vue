@@ -1,6 +1,10 @@
 <template>
+    <!-- Accordion component -->
+
 <div class="accordion">
   <ul>
+          <!-- List items -->
+
     <li tabindex="1">
       <div>
         <a href="spendenprojekte-detail#Wasserenergie">
@@ -59,26 +63,14 @@
 </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isFlipped: false
-    };
-  },
-  methods: {
-    flipCard(status) {
-      this.isFlipped = status;
-    }
-  }
-};
-</script>
+
 
 <style>
 
 
 
 
+/* Accordion styles */
 
 .accordion {
 
@@ -87,6 +79,7 @@ export default {
   height:60vh;
   overflow:hidden;
   margin:50px auto;
+/* List styles */
 
   ul {
 
@@ -95,6 +88,7 @@ export default {
     table-layout:fixed;
     margin:0;
     padding:0;
+/* List item styles */
 
     li {
 
@@ -109,6 +103,7 @@ export default {
       background-size: cover; 
 
       transition:all 500ms ease;
+/* Inner content styles */
 
       div {
         
@@ -150,6 +145,7 @@ export default {
             transition:all 400ms ease;
 
           }
+/* Heading styles */
 
           h2 {
 
@@ -162,7 +158,8 @@ export default {
             top:20px;
 
           }
-          
+          /* Paragraph styles */
+
           p {
             
             top:20px;
@@ -170,22 +167,21 @@ export default {
             
           }
 
-          router-link {
-            top:20px;
-            font-size:13.5px;
-          }
-
         }
 
       }
 
+
     }
+    /* Background image styles for each list item */
+
     li:nth-child(1) { background-image:url('https://www.werri.lbl.gov/wp-content/uploads/sites/18/2018/03/water-1500x630.jpg'); }
     li:nth-child(2) { background-image:url('https://www.lumi4innovation.it/app/uploads/2022/09/smart-mobility-smart-city-cos-%C3%A8-esempi-vantaggi-e-futuro-in-Italia-1024x576.jpg'); }
     li:nth-child(3) { background-image:url('https://wallpapers.com/images/featured/tree-background-xgzu0ujdd4khh95j.jpg'); }
     li:nth-child(4) { background-image:url('https://images.unsplash.com/photo-1523480717984-24cba35ae1ef?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9nJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D'); }
     li:nth-child(5) { background-image:url('https://www.savethechildren.org/content/dam/usa/images/global-programs/protection/uganda-refugee-ch192751-rec.jpg/_jcr_content/renditions/original.img.jpg'); }
     li:nth-child(6) { background-image:url('https://www.cato.org/sites/cato.org/files/styles/optimized/public/2021-01/GettyImages-1139851278.jpg?itok=VtCs0qNw'); }
+/* Hover and focus styles */
 
     &:hover li,
     &:focus-within li { width:8%; }

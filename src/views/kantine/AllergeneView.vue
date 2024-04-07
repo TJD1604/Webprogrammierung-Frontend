@@ -39,7 +39,12 @@ export default defineComponent({
       </div>
       <div class="section">
         <div class="content-inner">
-           <!-- Table displaying allergen information -->
+          <div class="button-container">
+            <h2 class="h2">Allergene</h2>
+            </div>
+            <div class="button-container"><p> <b>Informationen zu Allergenen</b> <br> Hier finden Sie eine Übersicht über die verschiedenen Allergene, die in unseren Speisen enthalten sein können. Bitte beachten Sie, dass die Speisekarte regelmäßig wechselt und die Allergene daher variieren können. Wenn Sie spezielle Anforderungen haben, zögern Sie nicht, uns zu kontaktieren. Wir helfen Ihnen gerne weiter. </p>
+            </div>
+              <!-- Table displaying allergen information -->
           <div class="tabellendiv">
             <table class="table">
               <tr>
@@ -116,7 +121,7 @@ export default defineComponent({
 
 <style>
 .tabellendiv{
-margin-top: 70px;
+margin-top: 20px;
 margin-left: 80px;
 margin-right: 80px;
 }

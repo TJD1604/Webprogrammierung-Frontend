@@ -1,5 +1,7 @@
 <template>
+  <!-- Container for displaying questions -->
   <div>
+    <!-- Iterate over each question and display Question component -->
     <Question
       v-for="question in questions"
       :key="question.id"
@@ -18,12 +20,14 @@ export default {
     Question,
   },
   props: {
+    // Array of questions to be displayed
     questions: Array,
   },
 };
 </script>
 
 <style>
+/* Resetting default styles */
 *,
 ::after,
 ::before {
@@ -31,23 +35,20 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Global styles */
 body {
- 
-  background: var(--clr-purple);
-  color: var(--clr-grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
+  background: var(--clr-purple); /* Background color */
+  color: var(--clr-grey-1); /* Text color */
+  line-height: 1.5; /* Line height */
+  font-size: 0.875rem; /* Font size */
 }
 
 main {
-  min-height: 100vh;
-  /* using flex because of better browser support */
+  min-height: 100vh; /* Minimum height of the viewport */
+  /* Using flexbox for centering content */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
-
-
 </style>

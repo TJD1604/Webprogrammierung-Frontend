@@ -23,6 +23,7 @@ import SpendenprojekteView from "@/views/spendenprojekte/SpendenprojekteView.vue
 import SpendenprojekteDetailView from "@/views/spendenprojekte/SpendenprojekteDetailView.vue";
 import WeiterbildungenView from "@/views/weiterbildungen/WeiterbildungenView.vue";
 import WettbewerbeView from "@/views/wettbewerbe/WettbewerbeView.vue";
+// Define router with routes for different views in the application
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

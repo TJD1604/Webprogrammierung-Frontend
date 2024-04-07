@@ -1,4 +1,5 @@
 <script lang="ts">
+// Importing necessary components and styles
 import { defineComponent } from 'vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
@@ -6,20 +7,21 @@ import ReviewCaourselComponent from '@/components/ReviewCarousel/ReviewCarouselC
 import '../view.css'
 import CustomButton from '@/components/CustomButton/CustomButton.vue'
 
-
+// Exporting the component definition
 export default defineComponent({
-  name: 'AboutUsView',
+  name: 'AboutUsView', // Component name
   components: {
     PicBackgroundComponent,
     FooterComponent,
     ReviewCaourselComponent,
     CustomButton
   },
+  // Data properties
   data() {
     return {
-      imagePath: 'images/ÜberUnsZiele.JPG',
-      title: 'Über Uns',
-      options: {
+      imagePath: 'images/ÜberUnsZiele.JPG', // Path to the background image
+      title: 'Über Uns', // Title of the section
+      options: { // Options for full-page component
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
@@ -31,19 +33,26 @@ export default defineComponent({
 </script>
 
 <template>
+  <!-- Main template -->
   <div>
+    <!-- Header -->
     <div class="position-relative">
       <HeaderLineComponent class="position-absolute top-0" />
     </div>
+    <!-- Full-page component with options -->
     <full-page :options="options">
+      <!-- Section 1 -->
       <div class="section">
+        <!-- Background image component -->
         <div class="position-relative">
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
+      <!-- Section 2 -->
       <div class="section">
         <div class="content-inner">
           <div class="button-container">
+            <!-- Introduction to the studio -->
             <div>
               <h2 class="h2">Kunst für den Wandel</h2>
               <p class="info-text">
@@ -58,13 +67,17 @@ export default defineComponent({
                 Themen wie soziale Gerechtigkeit, Umweltschutz und Bildung behandeln.
               </p>
             </div>
+            <!-- Review carousel component -->
             <ReviewCaourselComponent />
           </div>
+          <!-- Buttons container -->
           <div class="button-container">
             <div>
+            <!-- Studio rating -->
             <p class="stars"> ★★★★☆</p>
             <h2 class="h2">Unser Rating</h2>
           </div>
+              <!-- Custom buttons for different sections -->
               <CustomButton
                 buttonText="Auszeichnungen"
                 imagePath="/images/Auszeichnungen.JPG"
@@ -79,23 +92,22 @@ export default defineComponent({
                 imagePath="/images/FAQ.jpg"
                 destination="/faq"
               />
-            
-            
           </div>
         </div>
       </div>
+      <!-- Section 3 with footer -->
       <div class="section">
         <FooterComponent />
       </div>
     </full-page>
   </div>
 </template>
+
 <style>
+/* CSS styles for stars rating */
 .stars{
   font-size: 100px;
   text-align: center;
   color: rgb(210, 184, 157);
 }
-
 </style>
-

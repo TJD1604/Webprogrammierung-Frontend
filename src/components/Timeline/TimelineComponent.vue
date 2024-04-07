@@ -1,80 +1,100 @@
 <template>
-    <div class="container">
+  <!-- Timeline container -->
+  <div class="container">
+      <!-- Main timeline -->
       <div class="main-timeline">
-        <div class="timeline">
-          <div class="icon"></div>
-          <div class="date-content">
-            <div class="date-outer">
-              <span class="date">
-                <span class="month">4 Jahre</span>
-                <span class="year">2020</span>
-              </span>
-            </div>
+          <!-- Timeline item 1 -->
+          <div class="timeline">
+              <!-- Timeline icon -->
+              <div class="icon"></div>
+              <!-- Date content -->
+              <div class="date-content">
+                  <div class="date-outer">
+                      <!-- Date -->
+                      <span class="date">
+                          <span class="month">4 Years</span>
+                          <span class="year">2020</span>
+                      </span>
+                  </div>
+              </div>
+              <!-- Timeline content -->
+              <div class="timeline-content">
+                  <h3>Preparation and Planning</h3>
+                  <p class="description">
+                      The idea for Solidarity Studio was born, and the concept was developed. Initial discussions with potential partners and artists took place.
+                  </p>
+              </div>
           </div>
-          <div class="timeline-content">
-            <h3 >Vorbereitung und Planung</h3>
-            <p class="description">
-              Die Idee für Solidarity Studio entstand, und das Konzept wurde entwickelt. Erste Gespräche mit potenziellen Partnern und Künstlern fanden statt.
-            </p>
+          <!-- Timeline item 2 -->
+          <div class="timeline">
+              <!-- Timeline icon -->
+              <div class="icon"></div>
+              <!-- Date content -->
+              <div class="date-content">
+                  <div class="date-outer">
+                      <!-- Date -->
+                      <span class="date">
+                          <span class="month">2 Years</span>
+                          <span class="year">2022</span>
+                      </span>
+                  </div>
+              </div>
+              <!-- Timeline content -->
+              <div class="timeline-content">
+                  <h3>Foundation of Solidarity Studio</h3>
+                  <p class="description">
+                      Solidarity Studio was officially founded to promote art and design for charitable purposes. The first projects were launched to support communities.
+                  </p>
+              </div>
           </div>
-        </div>
-  
-        <div class="timeline">
-          <div class="icon"></div>
-          <div class="date-content">
-            <div class="date-outer">
-              <span class="date">
-                <span class="month">2 Jahre</span>
-                <span class="year">2022</span>
-              </span>
-            </div>
+          <!-- Timeline item 3 -->
+          <div class="timeline">
+              <!-- Timeline icon -->
+              <div class="icon"></div>
+              <!-- Date content -->
+              <div class="date-content">
+                  <div class="date-outer">
+                      <!-- Date -->
+                      <span class="date">
+                          <span class="month">1 Year</span>
+                          <span class="year">2023</span>
+                      </span>
+                  </div>
+              </div>
+              <!-- Timeline content -->
+              <div class="timeline-content">
+                  <h3>Growth and Expansion</h3>
+                  <p class="description">
+                      Solidarity Studio expanded its reach and began to gain international recognition. New partnerships were formed to reach and support more people.
+                  </p>
+              </div>
           </div>
-          <div class="timeline-content">
-            <h3 >Gründung von Solidarity Studio</h3>
-            <p class="description">
-              Solidarity Studio wurde offiziell gegründet, um Kunst und Design für wohltätige Zwecke zu fördern. Die ersten Projekte wurden gestartet, um Gemeinschaften zu unterstützen.
-            </p>
+          <!-- Timeline item 4 -->
+          <div class="timeline">
+              <!-- Timeline icon -->
+              <div class="icon"></div>
+              <!-- Date content -->
+              <div class="date-content">
+                  <div class="date-outer">
+                      <!-- Date -->
+                      <span class="date">
+                          <span class="month">1/2 Year</span>
+                          <span class="year">2024</span>
+                      </span>
+                  </div>
+              </div>
+              <!-- Timeline content -->
+              <div class="timeline-content">
+                  <h3>Duetto Cittadino Antico</h3>
+                  <p class="description">
+                      The latest collection from Solidarity Studio, "Duetto Cittadino Antico," celebrates the rich history and culture of past times. Each artwork tells a unique story while supporting important charity projects.
+                  </p>
+              </div>
           </div>
-        </div>
-  
-        <div class="timeline">
-          <div class="icon"></div>
-          <div class="date-content">
-            <div class="date-outer">
-              <span class="date">
-                <span class="month">1 Jahre</span>
-                <span class="year">2023</span>
-              </span>
-            </div>
-          </div>
-          <div class="timeline-content">
-            <h3 >Wachstum und Expansion</h3>
-            <p class="description">
-              Solidarity Studio erweiterte seine Reichweite und begann, international bekannt zu werden. Neue Partnerschaften wurden geschlossen, um mehr Menschen zu erreichen und zu unterstützen.
-            </p>
-          </div>
-        </div>
-  
-        <div class="timeline">
-          <div class="icon"></div>
-          <div class="date-content">
-            <div class="date-outer">
-              <span class="date">
-                <span class="month">1/2 Jahr</span>
-                <span class="year">2024</span>
-              </span>
-            </div>
-          </div>
-          <div class="timeline-content">
-            <h3 >Duetto Cittadino Antico</h3>
-            <p class="description">
-              Die neueste Kollektion von Solidarity Studio, "Duetto Cittadino Antico", feiert die reiche Geschichte und Kultur vergangener Zeiten. Jedes Kunstwerk erzählt eine einzigartige Geschichte und unterstützt gleichzeitig wichtige Wohltätigkeitsprojekte.
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
-  </template>
+  </div>
+</template>
+
   
 <style>
 body {

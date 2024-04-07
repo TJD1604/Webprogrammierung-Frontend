@@ -43,6 +43,14 @@ export default defineComponent({
       <div class="section">
         <div class="content-inner">
           <!-- Display the Mitarbeitende images with links -->
+          <div class="button-container">
+            <h2 class="h2">Mitarbeitende</h2>
+          </div>
+          <div class="button-container"><p>
+              <b>Lernen Sie unser Team kennen!</b> <br> Unsere Mitarbeitenden sind das Herzstück von Solidarity Studio. Jede*r
+              Einzelne bringt ihre/seine einzigartige Perspektive und Expertise ein, um eine bessere Welt zu gestalten. Erfahren
+              Sie mehr über die Menschen, die Solidarity Studio zu dem machen, was es ist.
+            </p></div>
           <div class="image-container">
             <div class="image">
               <img src="/images/MitarbeitendeIconH.png" alt="Image 1">
@@ -92,7 +100,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
     width: 80%;
     margin: 0 auto;
     
