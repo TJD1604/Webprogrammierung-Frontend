@@ -66,7 +66,7 @@ export default {
   methods: {
     // Method to handle form submission
     submitForm() {
-      alert('hi')
+      alert('Daten erfolgreich übermittelt!')
     }
   }
 }
