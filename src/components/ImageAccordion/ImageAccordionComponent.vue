@@ -1,5 +1,6 @@
+
 <template>
-    <!-- Accordion component -->
+    <!-- Accordion component original source that has been modified: https://codepen.io/ferry/pen/ZYVwxz from http://michaelferry.com/-->
 
 <div class="accordion">
   <ul>
