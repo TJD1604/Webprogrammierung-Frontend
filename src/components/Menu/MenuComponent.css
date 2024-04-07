@@ -1,8 +1,8 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -560px;
-  width: 430px;
+  left: -600px;
+  width: 470px;
   height: 100%;
   background-color: rgb(255, 255, 255);
   transition: left 0.3s ease;
