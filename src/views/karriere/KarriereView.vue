@@ -1,24 +1,18 @@
-<!-- This template defines the structure of the KarriereView component. -->
 <template>
   <div>
-    <!-- Utilizes a full-page component with options -->
     <full-page :options="options">
-      <!-- First section containing a PicBackgroundComponent -->
       <div class="section">
         <div class="position-relative">
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
-      <!-- Second section displaying information about the employer -->
       <div class="section">
         <div class="content-inner" style="width: 90% !important">
-          <!-- Title for employer information -->
-          <h2 style="align-self: self-start">We as an Employer</h2>
-          <!-- Render info cards -->
+          <h2 style="align-self: self-start">Wir als Arbeitgeber</h2>
+          <!-- Karten rendern -->
           <div class="row">
             <div class="col-md-8">
               <div class="row">
-                <!-- Loop through cards and render InfoCardComponent for each -->
                 <div class="col-md-4 mt-5" v-for="(item, index) in cards" :key="index">
                   <InfoCardComponent>
                     <template v-slot:front>
@@ -35,10 +29,9 @@
                 </div>
               </div>
             </div>
-            <!-- ContactComponent for job application -->
             <div class="col-md-4" style="align-self: center">
               <ContactComponent
-                imageText=" Click the heart to become an employee yourself"
+                imageText=" Klicke das Herz um selbst ein*e Mitarbeiter*in zu werden"
                 imagePath="/heart.png"
                 style="width: 78%; margin-right: 0; margin-left: auto"
               />
@@ -46,7 +39,6 @@
           </div>
         </div>
       </div>
-      <!-- Third section containing the FooterComponent -->
       <div class="section">
         <FooterComponent />
       </div>
@@ -61,7 +53,6 @@ import InfoCardComponent from '@/components/InfoCard/InfoCardComponent.vue'
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
 import ContactComponent from '@/components/ContactComponent/ContactComponent.vue'
 import '../view.css'
-
 export default defineComponent({
   name: 'KarriereView',
   components: {
@@ -71,7 +62,6 @@ export default defineComponent({
     ContactComponent
   },
   data() {
-    // Data initialization including options for full-page component, image path, title, and cards array
     return {
       options: {
         licenseKey: 'gplv3-license',
@@ -80,32 +70,31 @@ export default defineComponent({
         navigationTooltips: ['1', '2', '3']
       },
       imagePath: 'images/Karriere.JPG',
-      title: 'Career',
+      title: 'Karriere',
       cards: [
-        // Array of cards containing front and back content
         {
-          front: 'Mobile Work',
-          back: 'Flexibility, Productivity: Work from anywhere, anytime.'
+          front: 'Mobiles Arbeiten',
+          back: 'Flexibilität, Produktivität: Arbeit von überall, jederzeit.'
         },
         {
-          front: 'Fruit at the Workplace',
-          back: 'Health, Energy: Fresh snacks for creative minds.'
+          front: 'Obst am Arbeitsplatz',
+          back: 'Gesundheit, Energie: Frische Snacks für kreative Köpfe.'
         },
         {
-          front: 'Training Opportunities',
-          back: 'Learning, Growth: Opportunities for professional development and training.'
+          front: 'Weiterbildungsmöglichkeiten',
+          back: 'Lernen, Wachsen: Chancen für berufliche Entwicklung und Weiterbildung.'
         },
         {
-          front: 'Flexible Working Hours',
-          back: 'Balance, Freedom: Work according to individual rhythm.'
+          front: 'Flexible Arbeitszeiten',
+          back: 'Balance, Freiheit: Arbeit nach individuellem Rhythmus.'
         },
         {
-          front: 'Corporate Health Promotion',
-          back: 'Well-being, Prevention: Programs for healthy employees.'
+          front: 'Betriebliche Gesundheitsförderung',
+          back: 'Wohlbefinden, Prävention: Programme für gesunde Mitarbeiter.'
         },
         {
-          front: 'Employee Events',
-          back: 'Team Spirit, Fun: Shared experiences to strengthen bonds.'
+          front: 'Mitarbeiter-Events',
+          back: 'Teamgeist, Spaß: Gemeinsame Erlebnisse, Bindung stärken.'
         }
       ]
     }

@@ -74,21 +74,21 @@ export default defineComponent({
                 Zukunft schaffen
               </p>
               <div class="row" style="align-self: self-start;">
-                <div class="button-container col mt-5"  v-for="(item, index) in cards" :key="index">
-                  <InfoCardComponent>
-                    <template v-slot:front>
-                      <div>
-                        {{ item.front }}
-                      </div>
-                    </template>
-                    <template v-slot:back>
-                      <div>
-                        {{ item.back }}
-                      </div>
-                    </template>
-                  </InfoCardComponent>
-                </div>
-              </div>
+            <div class="button-container col mt-5"  v-for="(item, index) in cards" :key="index">
+              <InfoCardComponent>
+                <template v-slot:front>
+                  <div>
+                    {{ item.front }}
+                  </div>
+                </template>
+                <template v-slot:back>
+                  <div>
+                    {{ item.back }}
+                  </div>
+                </template>
+              </InfoCardComponent>
+            </div>
+          </div>
             </div>
             <div class="mt-3" style="align-self: self-start;">
               <div

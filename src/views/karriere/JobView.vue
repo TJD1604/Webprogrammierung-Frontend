@@ -1,46 +1,11 @@
-<!-- This template defines the structure of the JobView component. -->
-<template>
-  <div>
-
-    <full-page :options="options">
-
-      <div class="section">
-        <div class="position-relative">
-          <PicBackgroundComponent :imagePath="imagePath" :title="title" />
-        </div>
-      </div>
-      <!-- Second section displaying available job positions -->
-      <div class="section">
-        <div class="content-inner">
-          <!-- Title for available job positions -->
-          <h2 style="align-self: self-start; margin-bottom: 10%;">Our Currently Available Positions</h2>
-          <!-- Loop through jobList and pass data to JoboverviewComponent -->
-          <JoboverviewComponent  
-            v-for="job in jobList"
-            :key="job.id"
-            :jobId="job.id"
-            :iconPath="job.iconPath"
-            :jobTitle="job.position"
-            :salary="job.salary"
-          />
-        </div>
-      </div>
-      <!-- Third section containing the FooterComponent -->
-      <div class="section">
-        <FooterComponent />
-      </div>
-    </full-page>
-  </div>
-</template>
-
 <script lang="ts">
 import { defineComponent } from "vue";
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import JoboverviewComponent from '@/components/Jobs/JoboverviewComponent.vue'
 import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
-import axios from 'axios'; // Import Axios for API requests
+import axios from 'axios'; // Importiere Axios für API-Anfragen
 
-// Define an interface for the Job object to enforce typing
+// Definiere eine Schnittstelle für das Jobobjekt, um die Typisierung festzulegen
 interface Job {
   id: number;
   iconPath: string;
@@ -56,7 +21,6 @@ export default defineComponent({
     JoboverviewComponent
   },
   data() {
-    // Data initialization including options for full-page component, image path, title, and empty jobList array
     return {
       options: {
         licenseKey: 'gplv3-license',
@@ -65,20 +29,18 @@ export default defineComponent({
         navigationTooltips: ['1', '2', '3']
       },
       imagePath: 'images/Jobangebote.JPG',
-      title: 'Job Offers',
-      jobList: [] as Job[] // Initialize jobList as an empty array with typing 'Job'
+      title: 'Jobangebote',
+      jobList: [] as Job[] // Initialisiere die Jobliste als leeres Array mit der Typisierung 'Job'
     };
   },
   mounted() {
-    // Call method to fetch job data once component is mounted
-    this.fetchJobData();
+    this.fetchJobData(); // Rufe die Methode zum Abrufen von Jobdaten auf, sobald die Komponente montiert ist
   },
   methods: {
-    // Method to asynchronously fetch job data
     async fetchJobData() {
       try {
-        const response = await axios.get('https://x8ki-letl-twmt.n7.xano.io/api:wI9xKrmK/jobs'); // Execute the API request
-        // Extract only the required information for each job
+        const response = await axios.get('https://x8ki-letl-twmt.n7.xano.io/api:wI9xKrmK/jobs'); // Führe die API-Anfrage aus
+        // Extrahiere nur die benötigten Informationen für jeden Job
         this.jobList = response.data.map((job: any) => ({
           id: job.id,
           iconPath: "../../../images/job-offer.png",
@@ -92,3 +54,34 @@ export default defineComponent({
   }
 });
 </script>
+
+<template>
+  <div>
+    <full-page :options="options">
+      <div class="section">
+        <div class="position-relative">
+          <PicBackgroundComponent :imagePath="imagePath" :title="title" />
+        </div>
+      </div>
+      <div class="section">
+        <div class="content-inner">
+          <h2 style="align-self: self-start; margin-bottom: 10%;">Unsere aktuell verfügbaren Stellen</h2>
+          <!-- Durchlaufe die jobList und übergebe die Daten an JoboverviewComponent -->
+          
+          <JoboverviewComponent  
+            v-for="job in jobList"
+            :key="job.id"
+            :jobId="job.id"
+            :iconPath="job.iconPath"
+            :jobTitle="job.position"
+            :salary="job.salary"
+          />
+
+        </div>
+      </div>
+      <div class="section">
+        <FooterComponent />
+      </div>
+    </full-page>
+  </div>
+</template>

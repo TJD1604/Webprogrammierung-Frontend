@@ -1,40 +1,33 @@
-<!-- This template defines the structure of the JobDetailsView component. -->
 <template>
   <div>
-
     <full-page :options="options">
-
       <div class="section">
         <div class="position-relative">
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
-      <!-- Section displaying the selected job details -->
       <div class="section">
         <div class="content-inner">
-          <!-- Displaying the selected job -->
+          <!-- Hier wird der gewählte Job angezeigt -->
           <div class="row">
             <div class="col-7">
               <div v-if="job">
-                <!-- Displaying job details -->
                 <h2>{{ job.position }}</h2>
-                <p>Application deadline: {{ job.applicationDeadline }}</p>
-                <p>Tasks: {{ job.tasks }}</p>
-                <p>Requirements: {{ job.requirements }}</p>
-                <p>Salary: {{ job.salary }}</p>
+                <p>Bewerbungsfrist: {{ job.bewerbungsfrist }}</p>
+                <p>Aufgaben: {{ job.aufgaben }}</p>
+                <p>Anforderungen: {{ job.anforderungen }}</p>
+                <p>Gehalt: {{ job.gehalt }}</p>
               </div>
               <div v-else>
-                <p>Job details are loading...</p>
+                <p>Jobdetails werden geladen...</p>
               </div>
             </div>
-            <!-- Placeholder for employer image -->
             <div class="col-3">
               <img class="img-fluid" src="../../../images/employer.png"/>
             </div>
           </div>
         </div>
       </div>
-
       <div class="section">
         <FooterComponent />
       </div>
@@ -55,7 +48,6 @@ export default defineComponent({
     PicBackgroundComponent
   },
   data() {
-    // Data initialization including options for full-page component, image path, title, and null job
     return {
       options: {
         licenseKey: 'gplv3-license',
@@ -64,8 +56,8 @@ export default defineComponent({
         navigationTooltips: ['1', '2', '3']
       },
       imagePath: '../images/DetailsJobangebote.jpg',
-      title: 'Job Details',
-      job: null // Initialize job as null
+      title: 'Jobangebot im Detail',
+      job: null // Initialisiere den Job mit null
     };
   },
   props: {
@@ -75,15 +67,13 @@ export default defineComponent({
     }
   },
   mounted() {
-    // Call method to fetch job details once component is mounted
-    this.fetchJobDetails();
+    this.fetchJobDetails(); // Rufe die Methode zum Abrufen der Jobdetails auf, sobald die Komponente montiert ist
   },
   methods: {
-    // Method to asynchronously fetch job details
     async fetchJobDetails() {
       try {
         const response = await axios.get(`https://x8ki-letl-twmt.n7.xano.io/api:wI9xKrmK/jobs/${this.jobId}`);
-        this.job = response.data; // Update job with received data
+        this.job = response.data; // Aktualisiere den Job mit den erhaltenen Daten
       } catch (error) {
         console.error('Error fetching job details:', error);
       }
