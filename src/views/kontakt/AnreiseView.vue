@@ -41,10 +41,14 @@ export default defineComponent({
       <!-- Section for ArrivalComponent -->
       <div class="section">
         <div class="content-inner">
-          <h2 class="h2">Wie Sie uns finden</h2>
+          <div class="button-container">
+            <div>
+              <h2 class="h2">Wie wir zu finden sind</h2>
               <p class="info-text">
-                
+                Du willst unsere Kunst aus der Nähe anschauen? Dann besuch uns gerne! 
               </p>
+            </div>
+          </div>
           <!-- ArrivalComponent -->
           <ArrivalComponent />
         </div>

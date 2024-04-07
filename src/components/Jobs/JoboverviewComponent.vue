@@ -55,7 +55,7 @@ export default {
 <style scoped>
 /* Custom styles for job preview container */
 .job-preview-container {
-  background-color: #f5f5dc;
+  background-color: bisque;
   border-radius: 20px;
   margin-top: 10px;
   width: 80%;

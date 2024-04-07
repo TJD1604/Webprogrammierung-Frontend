@@ -12,6 +12,14 @@
       <!-- Section for contact information and form -->
       <div class="section">
         <div class="content-inner">
+          <div class="button-container">
+            <div>
+              <h2 class="h2">Wie man uns Erreicht</h2>
+              <p class="info-text">
+                Hast du ein Anliegen, oder willst du uns Feedback da lassen? Schreib uns gerne
+              </p>
+            </div>
+          </div>
           <div class="container">
             <div class="row mx-auto">
               <!-- Contact information card -->
