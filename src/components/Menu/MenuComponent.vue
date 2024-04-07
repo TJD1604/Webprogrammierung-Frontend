@@ -65,8 +65,7 @@ export default defineComponent({
         { title: 'Unsere Spendenprojekte im Detail', link: '/spendenprojekte-detail' }
       ]},
       { title: 'Produkte', link: '/produkte', subItems: [
-        { title: 'Aktuelle Künstlerin', link: '/produkte-artist' },
-        { title: 'Unsere Produkte im Detail', link: '/produkte-detail' }
+        { title: 'Aktuelle Künstlerin', link: '/produkte-artist' }        
       ]},
       { title: 'Partner:innen', link: '/partnerinnen', subItems: [
         { title: 'Partner:innen im Detail', link: '/partnerinnen-detail' }
@@ -74,9 +73,7 @@ export default defineComponent({
       { title: 'Karriere', link: '/karriere', subItems: [
         { title: 'Jobangebote', link: '/job' }
       ]},
-      { title: 'Weiterbildungen', link: '/weiterbildungen', subItems: [
-        { title: 'Weiterbildungen im Detail', link: '/weiterbildungen-detail' }
-      ]},
+      { title: 'Weiterbildungen', link: '/weiterbildungen'},
       { title: 'Wettbewerbe', link: '/wettbewerbe' },
       { title: 'Kantine', link: '/kantine', subItems: [
         { title: 'Allergene', link: '/allergene' }
