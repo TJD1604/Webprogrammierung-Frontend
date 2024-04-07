@@ -65,7 +65,14 @@ export default defineComponent({
       </div>
       <div class="section">
         <div class="content-inner">
-          <h2 style="align-self: self-start; margin-bottom: 10%;">Unsere aktuell verfügbaren Stellen</h2>
+          <div class="button-container">
+            <div>
+              <h2 class="h2">Unsere aktuell verfügbaren Stellen</h2>
+              <p class="info-text">
+                Du willst ein Teil des Solidarity Studios sein? Hier sind unsere aktuellen Stellenausschreibungen.
+              </p>
+            </div>
+          </div>
           <!-- Iterate over the jobList and pass the data to JoboverviewComponent -->
           
           <JoboverviewComponent  

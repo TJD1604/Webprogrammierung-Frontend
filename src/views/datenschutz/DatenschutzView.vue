@@ -1,31 +1,36 @@
 <script lang="ts">
+// Import necessary components and styles
 import { defineComponent } from 'vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
-
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
 import '../view.css'
 
+// Define the DatenschutzView component
 export default defineComponent({
   name: 'DatenschutzView',
   components: {
     FooterComponent,
-
     PicBackgroundComponent
   },
   data() {
+    // Data properties for the DatenschutzView component
     return {
+      // Configuration options for full-page component
       options: {
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['1', '2', '3']
       },
+      // Path to the background image
       imagePath: 'images/Datenschutz.jpg',
-      title: 'Datenschutzrichlinien'
+      // Title of the DatenschutzView component
+      title: 'Datenschutzrichtlinien'
     }
   }
 })
 </script>
+
 
 <template>
   <div>
@@ -38,6 +43,7 @@ export default defineComponent({
       <div class="section">
         <div class="content-inner">
           <div class="textdev">
+             <!-- Privacy Policy -->
             <h4>Allgemeiner Hinweis und Pflichtinformationen</h4>
             <h5>Benennung der verantwortlichen Stelle</h5>
             <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
