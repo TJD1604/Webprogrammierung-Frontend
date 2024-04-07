@@ -21,7 +21,7 @@ export default defineComponent({
         navigationTooltips: ['1', '2', '3']
       },
       imagePath: 'images/Allergene.jpg', // Path for the background image
-      title: 'Allgergene' // Title for the background image
+      title: 'Allergene' // Title for the background image
     }
   }
 })
@@ -40,7 +40,7 @@ export default defineComponent({
       <div class="section">
         <div class="content-inner">
           <div class="button-container">
-            <h2 class="h2">Allergene</h2>
+            <h2 class="h2">Hinweis zu Allergenen</h2>
             </div>
             <div class="button-container"><p> <b>Informationen zu Allergenen</b> <br> Hier finden Sie eine Übersicht über die verschiedenen Allergene, die in unseren Speisen enthalten sein können. Bitte beachten Sie, dass die Speisekarte regelmäßig wechselt und die Allergene daher variieren können. Wenn Sie spezielle Anforderungen haben, zögern Sie nicht, uns zu kontaktieren. Wir helfen Ihnen gerne weiter. </p>
             </div>
