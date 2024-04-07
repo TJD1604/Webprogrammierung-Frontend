@@ -1,5 +1,5 @@
 <template>
-  <!-- Question component -->
+  <!-- Question component original source that has been modified: https://codesandbox.io/p/sandbox/vue3-accordion-bwdxx?file=%2Fsrc%2FApp.vue-->
   <article class="question">
     <!-- Header section -->
     <header>

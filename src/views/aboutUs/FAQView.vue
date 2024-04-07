@@ -1,22 +1,25 @@
 <script lang="ts">
+// Importing necessary components and styles
 import { defineComponent } from 'vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
 import FAQComponent from '@/components/FAQ/FAQComponent.vue'
 import '../view.css'
 
+// Exporting the component definition
 export default defineComponent({
-  name: 'FAQView',
+  name: 'FAQView', // Component name
   components: {
     PicBackgroundComponent,
     FooterComponent,
     FAQComponent
   },
+  // Data properties
   data() {
     return {
-      imagePath: 'images/FAQ.jpg',
-      title: 'FAQ',
-      questions: [
+      imagePath: 'images/FAQ.jpg', // Path to the background image
+      title: 'FAQ', // Title of the section
+      questions: [ // Array of FAQ questions and answers
         {
           id: 1,
           title: 'Was ist Solidarity Studio?',
@@ -43,7 +46,7 @@ export default defineComponent({
           info: 'Wir unterstützen eine Vielzahl von Organisationen, die sich für Menschenrechte, Umweltschutz, Bildung, Gesundheitsversorgung und andere wichtige Anliegen einsetzen. Die unterstützten Organisationen variieren je nach den aktuellen Bedürfnissen und Anliegen.'
         }
       ],
-      options: {
+      options: { // Options for full-page component
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
@@ -55,30 +58,36 @@ export default defineComponent({
 </script>
 
 <template>
+  <!-- Main template -->
   <div>
+    <!-- Header line component -->
     <div class="position-relative">
       <HeaderLineComponent class="position-absolute top-0" />
     </div>
+    <!-- Full-page component with options -->
     <full-page :options="options">
+      <!-- Section 1 -->
       <div class="section">
+        <!-- Background image component -->
         <div class="position-relative">
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
+      <!-- Section 2 -->
       <div class="section">
         <div class="content-inner">
           <div class="button-container">
+            <!-- Title -->
             <h2 class="h2">Häufig gestellte Fragen</h2>
           </div>
+          <!-- FAQ component with questions prop -->
           <FAQComponent :questions="questions"  />
         </div>
       </div>
+      <!-- Section 3 with footer -->
       <div class="section">
         <FooterComponent />
       </div>
     </full-page>
   </div>
 </template>
-<style>
-
-</style>
