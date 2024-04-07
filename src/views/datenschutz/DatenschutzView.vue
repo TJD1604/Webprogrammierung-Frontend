@@ -36,12 +36,10 @@ export default defineComponent({
         </div>
       </div>
       <div class="section">
-        <div class="">
+        <div class="content-inner">
           <div class="textdev">
             <h4>Allgemeiner Hinweis und Pflichtinformationen</h4>
             <h5>Benennung der verantwortlichen Stelle</h5>
-            <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-            <p><span id="s3-t-firma">Solidarity Studio</span><br><span id="s3-t-ansprechpartner">Die Macher</span><br><span id="s3-t-strasse">Hier bei uns</span><br><span id="s3-t-plz">12345</span> <span id="s3-t-ort">Unser Ort</span></p>
             <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
             <h5>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h5>
             <p>Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
