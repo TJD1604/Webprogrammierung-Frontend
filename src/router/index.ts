@@ -19,11 +19,9 @@ import PartnerinnenView from "@/views/partnerinnen/PartnerinnenView.vue";
 import PartnerinnenDetailView from "@/views/partnerinnen/PartnerinnenDetailView.vue";
 import ProdukteView from "@/views/produkte/ProdukteView.vue";
 import ProdukteArtistView from "@/views/produkte/ProdukteArtistView.vue";
-import ProdukteDetailView from "@/views/produkte/ProdukteDetailView.vue";
 import SpendenprojekteView from "@/views/spendenprojekte/SpendenprojekteView.vue";
 import SpendenprojekteDetailView from "@/views/spendenprojekte/SpendenprojekteDetailView.vue";
 import WeiterbildungenView from "@/views/weiterbildungen/WeiterbildungenView.vue";
-import WeiterbildungenDetailView from "@/views/weiterbildungen/WeiterbildungenDetailView.vue";
 import WettbewerbeView from "@/views/wettbewerbe/WettbewerbeView.vue";
 
 const router = createRouter({
@@ -131,11 +129,6 @@ const router = createRouter({
       component: ProdukteArtistView,
     },
     {
-      path: "/produkte-detail",
-      name: "produkte-detail",
-      component: ProdukteDetailView,
-    },
-    {
       path: "/spendenprojekte",
       name: "spendenprojekte",
       component: SpendenprojekteView,
@@ -149,11 +142,6 @@ const router = createRouter({
       path: "/weiterbildungen",
       name: "weiterbildungen",
       component: WeiterbildungenView,
-    },
-    {
-      path: "/weiterbildungen-detail",
-      name: "weiterbildungen-detail",
-      component: WeiterbildungenDetailView,
     },
     {
       path: "/wettbewerbe",
