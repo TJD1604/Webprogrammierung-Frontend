@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
+
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
 import '../view.css'
 
@@ -8,18 +9,17 @@ export default defineComponent({
   name: 'DatenschutzView',
   components: {
     FooterComponent,
+
     PicBackgroundComponent
   },
   data() {
     return {
-      // Options for full-page component
       options: {
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['1', '2', '3']
       },
-      // Image path and title for PicBackgroundComponent
       imagePath: 'images/Datenschutz.jpg',
       title: 'Datenschutzrichlinien'
     }

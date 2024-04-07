@@ -3,17 +3,15 @@ import { defineComponent } from 'vue'
 import VideoBackgroundComponent from '@/components/VideoBackground/VideoBackgroundComponent.vue'
 import CustomButton from '@/components/CustomButton/CustomButton.vue'
 import FooterComponent from "@/components/Footer/FooterComponent.vue";
-import HeaderLineComponent from "@/components/HeaderLine/HeaderLineComponent.vue";
+
 
 import '../view.css'
-
 export default defineComponent({
   name: 'HomeView',
   components: {
     VideoBackgroundComponent,
     FooterComponent,
-    CustomButton,
-    HeaderLineComponent
+    CustomButton
   },
   data() {
     return {
@@ -32,88 +30,77 @@ export default defineComponent({
 
 <template>
   <div>
-    <div class="position-relative">
-      <!-- Header line component positioned at the top -->
-      <HeaderLineComponent class="position-absolute top-0" />
-    </div>
-    <!-- Utilizes a full-page component with options -->
-    <full-page :options="options">
-      <!-- First section containing a VideoBackgroundComponent -->
-      <div class="section">
-        <div class="position-relative">
-          <VideoBackgroundComponent />
-        </div>
+    <div>
+      <div class="position-relative">
+        <HeaderLineComponent class="position-absolute top-0" />
       </div>
-      <!-- Second section containing content and buttons -->
-      <div class="section">
-        <div class="content-inner">
-          <!-- Container for buttons and descriptive text -->
-          <div class="button-container">
-            <div>
-              <h2 class="h2">Discover</h2>
-              <p class="info-text">
-                Discover what makes our team so special! Visit us and enjoy delicious
-                <br />
-                treats in our cozy cafeteria, participate in exciting competitions<br />
-                and expand your knowledge through inspiring further education. <br />There is much
-                to discover and enjoy - come by and experience it yourself! <br /><strong
-                  >#Discover #StrongTogether</strong
-                >
-              </p>
-            </div>
-
-            <!-- Custom buttons for different destinations -->
-            <CustomButton
-              buttonText="Competitions"
-              imagePath="/images/Competitions.JPG"
-              destination="/competitions"
-            />
-            <CustomButton
-              buttonText="Further Education"
-              imagePath="/images/Education.jpg"
-              destination="/education"
-            />
-            <CustomButton
-              buttonText="Cafeteria"
-              imagePath="/images/Cafeteria.jpg"
-              destination="/cafeteria"
-            />
+      <full-page :options="options">
+        <div class="section">
+          <div class="position-relative">
+            <VideoBackgroundComponent />
           </div>
-          <!-- Container for additional image and quote -->
-          <div class="button-container">
-            <div>
-              <!-- Image displaying a slogan -->
-              <img
-                src="/slogan.png"
-                alt="Description of your image"
-                class="right-image"
+        </div>
+        <div class="section">
+          <div class="content-inner">
+            <div class="button-container">
+              <div>
+                <h2 class="h2">Entdecken</h2>
+                <p class="info-text">
+                  Entdecke, was unser Team so besonders macht! Besuche uns und gönn dir köstliche
+                  <br />
+                  Leckereien in unserer gemütlichen Kantine, nimm an spannenden Wettbewerben teil<br />
+                  und erweitere dein Wissen durch inspirierende Weiterbildungen. <br />Es gibt viel
+                  zu entdecken und zu genießen – komm vorbei und erlebe es selbst! <br /><strong
+                    >#Entdecken #GemeinsamStark</strong
+                  >
+                </p>
+              </div>
+
+              <CustomButton
+                buttonText="Wettbewerbe"
+                imagePath="/images/Wettbewerbe.JPG"
+                destination="/wettbewerbe"
+              />
+              <CustomButton
+                buttonText="Weiterbildungen"
+                imagePath="/images/Weiterbildung.jpg"
+                destination="/weiterbildungen"
+              />
+              <CustomButton
+                buttonText="Kantine"
+                imagePath="/images/Kantine.jpg"
+                destination="/kantine"
               />
             </div>
-            <!-- Circular background with quote content -->
-            <div class="circle-background">
-              <div class="circle-content">
-                
-                <!-- Quote about creativity and community -->
-                <p><em>"We want to encourage people to unleash their creativity through inspiring artworks while also creating a community dedicated to the well-being of others." </em><br><br>- Kristina Rubin, Head of Marketing </p>
+            <div class="button-container">
+              <div>
+                <img
+                  src="/slogan.png"
+                  alt="Description of your image"
+                  class="right-image"
+                />
+              </div>
+              <div class="circle-background">
+                <div class="circle-content">
+                  
+                  <p><em>"Wir wollen durch inspirierende Kunstwerke Menschen dazu ermutigen, ihre Kreativität zu entfalten und gleichzeitig eine Gemeinschaft zu schaffen, die sich für das Wohl anderer einsetzt." </em><br><br>- Kristina Rubin, Head of Marketing </p>
+                  
+                </div>
                 
               </div>
-              
             </div>
           </div>
         </div>
-      </div>
-      <!-- Third section containing the FooterComponent -->
-      <div class="section">
-      
-        <FooterComponent />
-      </div>
-    </full-page>
+        <div class="section">
+        
+          <FooterComponent />
+        </div>
+      </full-page>
+    </div>
   </div>
 </template>
-
 <style scoped>
 
-/* Styling for circular background */
 .circle-background {
   position: relative;
   width: 600px; /* Adjust the size of your circle */
@@ -122,7 +109,6 @@ export default defineComponent({
   display:flex;
 }
 
-/* Styling for right image */
 .right-image {
   position: relative;
   width: 500px;
@@ -130,7 +116,6 @@ export default defineComponent({
   object-fit: cover; 
 }
 
-/* Styling for quote content */
 .circle-content {
   display:flex;
   padding: 40px 40px;
