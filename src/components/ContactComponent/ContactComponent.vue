@@ -37,7 +37,6 @@
   .image {
   max-height: 100%;
   width: auto; 
-  
 }
   
 .bubble {
