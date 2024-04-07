@@ -3,7 +3,7 @@
   <ul>
     <li tabindex="1">
       <div>
-        <a href="#">
+        <a href="spendenprojekte-detail#Bewegung">
           <h2>Wegbereiter der Bewegung</h2>
           <p> Gemeinden auf neuen Pfaden.</p>
           
@@ -12,41 +12,46 @@
     </li>
     <li tabindex="2">
       <div>
-        <a href="#">
+        <a href="spendenprojekte-detail#Wasserenergie">
           <h2>Quellen der Kraft</h2>
           <p>Für eine erfrischte Welt.</p>
+
         </a>
       </div>
     </li>
     <li tabindex="3">
       <div>
-        <a href="#">
+        <a href="spendenprojekte-detail#Wald">
           <h2>Grüne Hüter</h2>
           <p>Für eine waldige Zukunft.</p>
+
         </a>
       </div>
     </li>
     <li tabindex="4">
       <div>
-        <a href="#">
+        <a href="spendenprojekte-detail#Tiere">
           <h2>Pfotenliebe</h2>
           <p>Streuner schenken Zuhause.</p>
+
         </a>
       </div>
     </li>
     <li tabindex="5">
       <div>
-        <a href="#">
+        <a href="spendenprojekte-detail#Kinder">
           <h2>Kinderwelten</h2>
           <p>Ein Lächeln, eine Welt.</p>
+
         </a>
       </div>
     </li>
     <li tabindex="6">
       <div>
-        <a href="#">
+        <a href="spendenprojekte-detail#Medizin">
           <h2>Heilende Hände</h2>
           <p>Für jeden ein Weg zur Gesundheit.</p>
+
         </a>
       </div>
     </li>
@@ -163,6 +168,11 @@ export default {
             top:20px;
             font-size:13.5px;
             
+          }
+
+          router-link {
+            top:20px;
+            font-size:13.5px;
           }
 
         }
