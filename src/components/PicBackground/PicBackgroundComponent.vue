@@ -37,7 +37,7 @@ export default defineComponent({
       <div class="pic-bottom">
         <h1 class="title">{{ title }}</h1>
         <!-- Button linking to products page -->
-        <a href="/products" class="transparent-button">→</a>
+        <a href="/produkte" class="transparent-button">→</a>
         <!-- Scroll down arrow -->
         <a v-if="showArrow" class="scroll-down-arrow">↓</a>
       </div>
