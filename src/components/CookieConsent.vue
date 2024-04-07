@@ -1,9 +1,12 @@
 <template>
+  <!-- Cookie consent component with transition -->
   <transition :name="transition">
     <div v-if="show" class="cookie-consent" role="dialog">
+      <!-- Slot for message -->
       <slot name="message">
         <span class="cookie-consent-message">
           {{ message }}
+          <!-- Slot for link -->
           <slot name="link">
             <a v-bind="{ href, target, rel }" class="cookie-consent-link" role="button">
               {{ linkLabel }}
@@ -12,6 +15,7 @@
         </span>
       </slot>
       <section @click="dismiss">
+        <!-- Slot for button -->
         <slot name="button">
           <button class="cookie-consent-compliance" type="button">
             {{ buttonLabel }}
@@ -23,6 +27,7 @@
 </template>
 
 <script>
+// Define CookieConsent component
 export default {
   name: 'CookieConsent',
   props: {
@@ -33,20 +38,20 @@ export default {
     },
     message: {
       type: String,
-      default: 'This website uses cookies to ensure you get the best experience on our website.'
+      default: 'Diese Website verwendet Cookies, um sicherzustellen, dass Sie die beste Erfahrung auf unserer Website erhalten.'
     },
     // button
     linkLabel: {
       type: String,
-      default: 'Learn more'
+      default: 'Mehr erfahren'
     },
     buttonLabel: {
       type: String,
-      default: 'Got it!'
+      default: 'Verstanden!'
     },
     href: {
       type: String,
-      default: 'http://cookiesandyou.com'
+      default: 'http://cookiesunddu.com'
     },
     target: {
       type: String,
@@ -89,6 +94,7 @@ export default {
   },
   methods: {
     dismiss() {
+      // Dismiss the cookie consent and set cookie
       this.show = false
       this.setCookie(this.cookieName, 1, this.cookieExpiryDays, this.cookieDomain, this.cookiePath)
     },
