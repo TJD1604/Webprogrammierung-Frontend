@@ -70,7 +70,7 @@ export default defineComponent({
 </script>
 <template>
   <div>
-    <full-page :options="options">
+    <full-page :options="options" >
       <div class="section">
         <div class="position-relative">
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />

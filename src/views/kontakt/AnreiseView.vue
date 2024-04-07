@@ -9,7 +9,6 @@ export default defineComponent({
   name: 'AnreiseView',
   components: {
     FooterComponent,
-
     PicBackgroundComponent,
     ArrivalComponent
   },
@@ -30,20 +29,27 @@ export default defineComponent({
 
 <template>
   <div>
+    <!-- Full-page component with options -->
     <full-page :options="options">
+      <!-- Section for background image -->
       <div class="section">
         <div class="position-relative">
+          <!-- Background image component with dynamic image path and title -->
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
+      <!-- Section for ArrivalComponent -->
       <div class="section">
         <div class="content-inner">
+          <!-- ArrivalComponent -->
           <ArrivalComponent />
         </div>
       </div>
+      <!-- FooterComponent -->
       <div class="section">
         <FooterComponent />
       </div>
     </full-page>
   </div>
 </template>
+

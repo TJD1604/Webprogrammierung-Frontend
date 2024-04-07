@@ -1,15 +1,20 @@
 <template>
   <div>
+    <!-- Full-page component with options -->
     <full-page :options="options">
+      <!-- Section for background image -->
       <div class="section">
         <div class="position-relative">
+          <!-- Background image component with dynamic image path and title -->
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
+      <!-- Section for contact information and form -->
       <div class="section">
         <div class="content-inner">
           <div class="container">
             <div class="row mx-auto">
+              <!-- Contact information card -->
               <div class="col-md-4">
                 <div class="arrival-div">
                   <div class="card m-5 rounded border p-2 self-center mx-auto">
@@ -23,6 +28,7 @@
                   </div>
                 </div>
               </div>
+              <!-- Contact form -->
               <div class="col-md-8">
                 <div class="arrival-div">
                   <ContactForm />
@@ -32,6 +38,7 @@
           </div>
         </div>
       </div>
+      <!-- Footer component -->
       <div class="section">
         <FooterComponent />
       </div>

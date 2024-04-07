@@ -9,7 +9,7 @@
       <div class="section">
         <div class="content-inner">
           <MenuCardComponent/>
-          <!-- Infobox für Besucherinformationen -->
+          <!-- Infobox for visitor information -->
           <div class="infobox-container" style="width: 100%;">
             <div class="infobox bg-light p-4 rounded mt-5">
               <h3 class="mb-2">Besucherinformationen</h3>

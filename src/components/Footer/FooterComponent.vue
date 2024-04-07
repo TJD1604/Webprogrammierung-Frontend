@@ -1,11 +1,9 @@
 <template>
-<img
-                  src="/footer.png"
-                  class="footer-image"
-                />
-<footer style="background-color: #0F0F0F;">
+  <!-- Footer section -->
+  <footer style="background-color: #0F0F0F;">
     <div class="container p-4">
       <div class="row">
+        <!-- Column for studio information -->
         <div class="col-lg-6 col-md-12 mb-4">
           <h5 class="text-uppercase fw-bold mb-4" style="color: #E3CAAB;">Solidarity Studio</h5>
           <p style="color: white;">
@@ -15,6 +13,7 @@
             Treten Sie uns bei auf dieser Reise der Kunst und des Mitgefühls.
           </p>
         </div>
+        <!-- Column for important links -->
         <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="text-uppercase fw-bold mb-4" style="color: #E3CAAB;">links</h5>
           <ul class="list-unstyled mb-0">
@@ -32,6 +31,7 @@
             </li>
           </ul>
         </div>
+        <!-- Column for opening hours -->
         <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="text-uppercase fw-bold mb-4" style="color: #E3CAAB;">Öffnungszeiten</h5>
           <table class="table" style="border-color: #666;">
@@ -49,14 +49,13 @@
         </div>
       </div>
     </div>
+    <!-- Copyright information -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: #E3CAAB;">
       © 2024 Copyright:
       <a class="text-reset fw-bold" href="/">Solidarity Studio</a>
     </div>
-    <!-- Copyright -->
   </footer>
 </template>
-
 
 <style>
 .footer-image{
