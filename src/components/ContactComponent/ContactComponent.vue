@@ -1,9 +1,14 @@
 <template>
+  <!-- Container component for the image and bubble -->
     <div class="container">
+      <!-- Router link to the contact page -->
       <router-link to="/kontakt" class="heart-link">
+        <!-- Image with dynamic source binding -->
       <img :src="imagePath" alt="Bild" class="image" >
       </router-link>
+      <!-- Bubble element for displaying text -->
       <div class="bubble" ref="bubble">
+         <!-- Dynamic text content -->
         <p>{{ imageText }}</p>
       </div>
     </div>
@@ -12,13 +17,14 @@
   <script lang="ts">
   export default {
     props: {
-      imageText: String,
-      imagePath: String
+      imageText: String, // Text to display in the bubble
+      imagePath: String // Path for the image source
     },
     mounted() {
+      // Functionality to show the bubble after a delay
   setTimeout(() => {
     (this.$refs.bubble as HTMLElement).classList.add('show-bubble');
-  }, 5000); // 5 Sekunden Verzögerung
+  }, 5000); // 5-second delay
 }
   }
   </script>
@@ -47,7 +53,7 @@
 }
 
 .show-bubble {
-  transform: translate(-50%, -50%) scale(1); /* Aufpoppen */
+  transform: translate(-50%, -50%) scale(1); /* Bubble pop-up effect */
   opacity: 1;
 }
   @keyframes bubbleAnimation {
@@ -59,7 +65,7 @@
       opacity: 1;
     }
     100% {
-      transform: translateY(-50%) translateX(-100px); /* Bewegung nach links */
+      transform: translateY(-50%) translateX(-100px); /* Movement to the left */
       opacity: 1;
     }
   }
