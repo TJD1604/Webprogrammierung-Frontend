@@ -1,0 +1,30 @@
+.job-preview-container {
+  background-color: #f5f5dc; 
+  border-radius: 20px; 
+  margin-top: 10px; 
+  width: 80%; 
+}
+
+.job-icon {
+  width: 40px;
+  height: auto;
+}
+
+.job-title {
+  font-size: 16px; 
+  font-weight: normal; 
+}
+
+.salary {
+  font-style: italic;
+  color: #6c757d;
+}
+
+.custom-router-link {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.custom-router-link:hover {
+  font-weight: bold;
+}

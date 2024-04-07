@@ -16,11 +16,13 @@ export default defineComponent({
 });
 </script>
 
-
 <template>
+  <!-- Header component -->
   <div class="position-relative">
     <HeaderLineComponent class="position-absolute top-0"/>
   </div>
+
+  <!-- Cookie consent component -->
   <CookieConsent 
     message="Wir backen nicht nur Cookies in unserer Kantine, sondern auch auf unserer Webseite."
     linkLabel="Erfahre mehr"
@@ -40,14 +42,17 @@ export default defineComponent({
         alignItems: 'center',
         padding: '20px'
       }"
-    
   />
+
+  <!-- Router view for rendering different components based on the current route -->
   <RouterView />
+
+  <!-- Footer component -->
   <FooterComponent />
 </template>
 
 <style>
-
+/* Font imports */
 @font-face {
   font-family: Dubai;
   src: url('./fonts/Dubai-Font/DubaiW23-Regular.woff2') format('woff2'),
@@ -55,14 +60,17 @@ export default defineComponent({
        url('./fonts/Dubai-Font/DubaiW23-Regular.tte') format('truetype');
 }
 
+/* Global styles */
 #app {
   font-family: Dubai, sans-serif; 
 }
 
-h1,h2,h3,h4,h5,h6{
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
 
+/* Cookie consent button styles */
 .cookie-consent-compliance {
   background-color: #2f2f2f83;
   color: #fff;
@@ -78,6 +86,7 @@ h1,h2,h3,h4,h5,h6{
   background-color: #2f2f2fe1;
 }
 
+/* Content inner container styles */
 .content-inner {
   width: 80% !important; /* Maximal 80% der Bildschirmbreite einnehmen */
   margin: 0 auto !important; /* Horizontal zentrieren */
@@ -85,5 +94,4 @@ h1,h2,h3,h4,h5,h6{
   justify-content: center !important; /*Horizontal zentrieren */
   align-items: center !important; /* Vertikal zentrieren */
 }
-
 </style>

@@ -1,28 +1,34 @@
+<!-- This template defines the structure of the KontaktView component. -->
 <template>
   <div>
+
     <full-page :options="options">
+      
       <div class="section">
         <div class="position-relative">
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
+      <!-- containing contact information and contact form -->
       <div class="section">
         <div class="content-inner">
           <div class="container">
             <div class="row mx-auto">
+              <!-- Contact information -->
               <div class="col-md-4">
                 <div class="arrival-div">
                   <div class="card m-5 rounded border p-2 self-center mx-auto">
                     <div class="card-body">
-                      <h4 class="card-title">Kontaktinformationen</h4>
+                      <h4 class="card-title">Contact Information</h4>
                       <p class="card-text"><strong>Email:</strong> kontakt@example.com</p>
-                      <p class="card-text"><strong>Telefon:</strong> +49 123 456789</p>
-                      <p class="card-text"><strong>Adresse:</strong> Musterstraße 123, 12345 Musterstadt</p>
-                      <p class="card-text"><strong>Ansprechpartner:</strong> Max Mustermann</p>
+                      <p class="card-text"><strong>Phone:</strong> +49 123 456789</p>
+                      <p class="card-text"><strong>Address:</strong> Musterstraße 123, 12345 Musterstadt</p>
+                      <p class="card-text"><strong>Contact Person:</strong> Max Mustermann</p>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- Contact form -->
               <div class="col-md-8">
                 <div class="arrival-div">
                   <ContactForm />
@@ -32,6 +38,7 @@
           </div>
         </div>
       </div>
+
       <div class="section">
         <FooterComponent />
       </div>
@@ -54,6 +61,7 @@ export default defineComponent({
     PicBackgroundComponent
   },
   data() {
+    // Data initialization including options for full-page component, image path, and title
     return {
       options: {
         licenseKey: 'gplv3-license',
@@ -62,7 +70,7 @@ export default defineComponent({
         navigationTooltips: ['1', '2', '3']
       },
       imagePath: 'images/Kontakt.JPG',
-      title: 'Kontakt'
+      title: 'Contact'
     }
   }
 })
