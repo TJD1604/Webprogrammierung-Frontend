@@ -1,3 +1,5 @@
+<!-- oOriginal source that has been modified: https://www.w3schools.com/howto/howto_css_image_overlay.asp -->
+
 <template>
   <!-- Container for the image and text overlay -->
     <div class="container">

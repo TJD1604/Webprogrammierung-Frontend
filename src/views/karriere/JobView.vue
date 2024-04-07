@@ -3,9 +3,9 @@ import { defineComponent } from "vue";
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import JoboverviewComponent from '@/components/Jobs/JoboverviewComponent.vue'
 import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
-import axios from 'axios'; // Importiere Axios für API-Anfragen
+import axios from 'axios'; // Import Axios for API requests
 
-// Definiere eine Schnittstelle für das Jobobjekt, um die Typisierung festzulegen
+// Define an interface for the job object to set the typing
 interface Job {
   id: number;
   iconPath: string;
@@ -30,17 +30,17 @@ export default defineComponent({
       },
       imagePath: 'images/Jobangebote.JPG',
       title: 'Jobangebote',
-      jobList: [] as Job[] // Initialisiere die Jobliste als leeres Array mit der Typisierung 'Job'
+      jobList: [] as Job[] // Initialize the job list as an empty array with the typing 'Job'
     };
   },
   mounted() {
-    this.fetchJobData(); // Rufe die Methode zum Abrufen von Jobdaten auf, sobald die Komponente montiert ist
+    this.fetchJobData(); // Call the method to fetch job data once the component is mounted
   },
   methods: {
     async fetchJobData() {
       try {
-        const response = await axios.get('https://x8ki-letl-twmt.n7.xano.io/api:wI9xKrmK/jobs'); // Führe die API-Anfrage aus
-        // Extrahiere nur die benötigten Informationen für jeden Job
+        const response = await axios.get('https://x8ki-letl-twmt.n7.xano.io/api:wI9xKrmK/jobs'); // Perform the API request
+        // Extract only the required information for each job
         this.jobList = response.data.map((job: any) => ({
           id: job.id,
           iconPath: "../../../images/job-offer.png",
@@ -66,7 +66,7 @@ export default defineComponent({
       <div class="section">
         <div class="content-inner">
           <h2 style="align-self: self-start; margin-bottom: 10%;">Unsere aktuell verfügbaren Stellen</h2>
-          <!-- Durchlaufe die jobList und übergebe die Daten an JoboverviewComponent -->
+          <!-- Iterate over the jobList and pass the data to JoboverviewComponent -->
           
           <JoboverviewComponent  
             v-for="job in jobList"

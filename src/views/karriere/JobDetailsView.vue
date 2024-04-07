@@ -8,7 +8,7 @@
       </div>
       <div class="section">
         <div class="content-inner">
-          <!-- Hier wird der gewählte Job angezeigt -->
+          <!-- Display the selected job here -->
           <div class="row">
             <div class="col-7">
               <div v-if="job">
@@ -57,7 +57,7 @@ export default defineComponent({
       },
       imagePath: '../images/DetailsJobangebote.jpg',
       title: 'Jobangebot im Detail',
-      job: null // Initialisiere den Job mit null
+      job: null // Initialize the job with null
     };
   },
   props: {
@@ -67,13 +67,13 @@ export default defineComponent({
     }
   },
   mounted() {
-    this.fetchJobDetails(); // Rufe die Methode zum Abrufen der Jobdetails auf, sobald die Komponente montiert ist
+    this.fetchJobDetails(); // Call the method to fetch job details once the component is mounted
   },
   methods: {
     async fetchJobDetails() {
       try {
         const response = await axios.get(`https://x8ki-letl-twmt.n7.xano.io/api:wI9xKrmK/jobs/${this.jobId}`);
-        this.job = response.data; // Aktualisiere den Job mit den erhaltenen Daten
+        this.job = response.data; // Update the job with the received data
       } catch (error) {
         console.error('Error fetching job details:', error);
       }

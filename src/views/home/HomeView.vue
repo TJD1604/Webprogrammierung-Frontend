@@ -82,17 +82,13 @@ export default defineComponent({
               </div>
               <div class="circle-background">
                 <div class="circle-content">
-                  
                   <p><em>"Wir wollen durch inspirierende Kunstwerke Menschen dazu ermutigen, ihre Kreativität zu entfalten und gleichzeitig eine Gemeinschaft zu schaffen, die sich für das Wohl anderer einsetzt." </em><br><br>- Kristina Rubin, Head of Marketing </p>
-                  
                 </div>
-                
               </div>
             </div>
           </div>
         </div>
         <div class="section">
-        
           <FooterComponent />
         </div>
       </full-page>
@@ -100,7 +96,7 @@ export default defineComponent({
   </div>
 </template>
 <style scoped>
-
+/* Your scoped styles here */
 .circle-background {
   position: relative;
   width: 600px; /* Adjust the size of your circle */
@@ -119,7 +115,6 @@ export default defineComponent({
 .circle-content {
   display:flex;
   padding: 40px 40px;
-
   align-self: center;
   justify-self: center;
   text-align: left;
@@ -127,6 +122,4 @@ export default defineComponent({
   color: #fff;
   text-align: center;
 }
-
-
 </style>
