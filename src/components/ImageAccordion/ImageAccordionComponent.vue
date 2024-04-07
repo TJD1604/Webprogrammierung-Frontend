@@ -3,19 +3,19 @@
   <ul>
     <li tabindex="1">
       <div>
-        <a href="spendenprojekte-detail#Bewegung">
-          <h2>Wegbereiter der Bewegung</h2>
-          <p> Gemeinden auf neuen Pfaden.</p>
-          
+        <a href="spendenprojekte-detail#Wasserenergie">
+          <h2>Quellen der Kraft</h2>
+          <p>Für eine erfrischte Welt.</p>
+
         </a>
       </div>
     </li>
     <li tabindex="2">
       <div>
-        <a href="spendenprojekte-detail#Wasserenergie">
-          <h2>Quellen der Kraft</h2>
-          <p>Für eine erfrischte Welt.</p>
-
+        <a href="spendenprojekte-detail#Bewegung">
+          <h2>Wegbereiter der Bewegung</h2>
+          <p> Gemeinden auf neuen Pfaden.</p>
+          
         </a>
       </div>
     </li>
@@ -180,9 +180,8 @@ export default {
       }
 
     }
-    
-    li:nth-child(1) { background-image:url('https://www.lumi4innovation.it/app/uploads/2022/09/smart-mobility-smart-city-cos-%C3%A8-esempi-vantaggi-e-futuro-in-Italia-1024x576.jpg'); }
-    li:nth-child(2) { background-image:url('https://www.werri.lbl.gov/wp-content/uploads/sites/18/2018/03/water-1500x630.jpg'); }
+    li:nth-child(1) { background-image:url('https://www.werri.lbl.gov/wp-content/uploads/sites/18/2018/03/water-1500x630.jpg'); }
+    li:nth-child(2) { background-image:url('https://www.lumi4innovation.it/app/uploads/2022/09/smart-mobility-smart-city-cos-%C3%A8-esempi-vantaggi-e-futuro-in-Italia-1024x576.jpg'); }
     li:nth-child(3) { background-image:url('https://wallpapers.com/images/featured/tree-background-xgzu0ujdd4khh95j.jpg'); }
     li:nth-child(4) { background-image:url('https://images.unsplash.com/photo-1523480717984-24cba35ae1ef?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9nJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D'); }
     li:nth-child(5) { background-image:url('https://www.savethechildren.org/content/dam/usa/images/global-programs/protection/uganda-refugee-ch192751-rec.jpg/_jcr_content/renditions/original.img.jpg'); }

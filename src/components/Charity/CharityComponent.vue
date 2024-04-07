@@ -5,7 +5,7 @@
       <p>{{ info }}
       </p>
       <div class="number-section">
-        <p class="big-number">{{ tweened.toFixed(0) }} €</p>
+        <p class="big-number">{{ amount }} €</p>
       </div>
     </div>
     <div>
@@ -14,7 +14,6 @@
   </div>
 </template>
 <script>
-import gsap from 'gsap'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -25,22 +24,7 @@ export default defineComponent({
     info: String,
     imageP: String
 
-  },
-  data() {
-    return {
-      number: 0,
-      tweened: 0
-    }
-  },
-  watch: {
-    amount(n) {
-      gsap.to(this, { duration: 0.5, tweened: Number(n) || 0 })
-    }
-  },
-  mounted() {
-    // Starten Sie die Animation für die vorher festgelegte Variable
-    gsap.to(this, { duration: 0.5, tweened: this.amount })
-  }
+  }  
 })
 </script>
 <style>
