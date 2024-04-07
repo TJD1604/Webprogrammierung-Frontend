@@ -20,10 +20,10 @@
                   <div class="card m-5 rounded border p-2 self-center mx-auto">
                     <div class="card-body">
                       <h4 class="card-title">Kontaktinformationen</h4>
-                      <p class="card-text"><strong>Email:</strong> kontakt@example.com</p>
+                      <p class="card-text"><strong>Email:</strong> s_bruckmoser22@hwr-berlin.de</p>
                       <p class="card-text"><strong>Telefon:</strong> +49 123 456789</p>
-                      <p class="card-text"><strong>Adresse:</strong> Musterstraße 123, 12345 Musterstadt</p>
-                      <p class="card-text"><strong>Ansprechpartner:</strong> Max Mustermann</p>
+                      <p class="card-text"><strong>Adresse:</strong> Alt-Friedrichsfelde 60</p>
+                      <p class="card-text"><strong>Ansprechpartner:</strong> Janana</p>
                     </div>
                   </div>
                 </div>

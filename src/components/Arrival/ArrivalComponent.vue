@@ -29,7 +29,7 @@
           </p>
           <!-- Information about airport access -->
           <p>
-            Für Besucher von außerhalb der Stadt ist der internationale Flughafen <em>Musterflughafen</em> nur eine kurze Fahrt entfernt. Von dort aus gelangen Sie mit öffentlichen Verkehrsmitteln oder dem Taxi schnell und einfach zu unserem Studio.
+            Für Besucher von außerhalb der Stadt ist der internationale Flughafen <em>BER</em> nur eine kurze Fahrt entfernt. Von dort aus gelangen Sie mit öffentlichen Verkehrsmitteln oder dem Taxi schnell und einfach zu unserem Studio.
           </p>
           <!-- Welcome message -->
           <p>
@@ -46,6 +46,7 @@ import { defineComponent } from "vue";
 import { GoogleMap, Marker } from "vue3-google-map";
 
 export default defineComponent({
+  // eslint-disable-next-line vue/no-reserved-component-names
   components: { GoogleMap, Marker }, // Registering GoogleMap and Marker components
   setup() {
     // Center coordinates for the Google Map

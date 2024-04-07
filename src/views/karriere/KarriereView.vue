@@ -38,7 +38,7 @@
             <div class="col-md-4" style="align-self: center">
               <!-- Contact component with image and text -->
               <ContactComponent
-                imageText="Click the heart to become an employee"
+                imageText="Klicke hier, um ein*e Mitarbeiter*in zu werden"
                 imagePath="/heart.png"
                 style="width: 78%; margin-right: 0; margin-left: auto"
               />
@@ -80,30 +80,30 @@ export default defineComponent({
       imagePath: 'images/Karriere.JPG',
       title: 'Karriere',
       cards: [
-        {
-          front: 'Mobiles Arbeiten',
-          back: 'Flexibility, productivity: work from anywhere, anytime.'
-        },
-        {
-          front: 'Obst am Arbeitsplatz',
-          back: 'Health, energy: fresh snacks for creative minds.'
-        },
-        {
-          front: 'Weiterbildungsmöglichkeiten',
-          back: 'Learning, growing: opportunities for professional development and further education.'
-        },
-        {
-          front: 'Flexible Arbeitszeiten',
-          back: 'Balance, freedom: work according to individual rhythm.'
-        },
-        {
-          front: 'Betriebliche Gesundheitsförderung',
-          back: 'Well-being, prevention: programs for healthy employees.'
-        },
-        {
-          front: 'Mitarbeiter-Events',
-          back: 'Team spirit, fun: shared experiences, strengthening bonds.'
-        }
+      {
+        front: 'Mobiles Arbeiten',
+        back: 'Flexibilität, Produktivität: Arbeiten von überall, zu jeder Zeit.'
+      },
+      {
+        front: 'Obst am Arbeitsplatz',
+        back: 'Gesundheit, Energie: Frische Snacks für kreative Köpfe.'
+      },
+      {
+        front: 'Weiterbildungsmöglichkeiten',
+        back: 'Lernen, Wachstum: Möglichkeiten zur beruflichen Weiterentwicklung und Fortbildung.'
+      },
+      {
+        front: 'Flexible Arbeitszeiten',
+        back: 'Balance, Freiheit: Arbeiten nach individuellem Rhythmus.'
+      },
+      {
+        front: 'Betriebliche Gesundheitsförderung',
+        back: 'Wohlbefinden, Prävention: Programme für gesunde Mitarbeiter.'
+      },
+      {
+        front: 'Mitarbeiter-Events',
+        back: 'Teamgeist, Spaß: Gemeinsame Erlebnisse, Stärkung der Bindungen.'
+      }
       ]
     }
   }
