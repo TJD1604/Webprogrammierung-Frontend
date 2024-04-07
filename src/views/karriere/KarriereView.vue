@@ -7,8 +7,8 @@
         </div>
       </div>
       <div class="section">
-        <div class="content-inner" style="width: 90% !important;">
-          <h2 style="align-self: self-start;">Wir als Arbeitgeber</h2>
+        <div class="content-inner" style="width: 90% !important">
+          <h2 style="align-self: self-start">Wir als Arbeitgeber</h2>
           <!-- Karten rendern -->
           <div class="row">
             <div class="col-md-8">
@@ -29,8 +29,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4" style="align-self: center; ">
-              <ContactComponent imageText=" Klicke das Herz um selbst ein*e Mitarbeiter*in zu werden" imagePath="/heart.png" style="width: 78%; margin-right: 0; margin-left: auto;"/>
+            <div class="col-md-4" style="align-self: center">
+              <ContactComponent
+                imageText=" Klicke das Herz um selbst ein*e Mitarbeiter*in zu werden"
+                imagePath="/heart.png"
+                style="width: 78%; margin-right: 0; margin-left: auto"
+              />
             </div>
           </div>
         </div>
@@ -43,14 +47,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import InfoCardComponent from '@/components/InfoCard/InfoCardComponent.vue'
-import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
-import ContactComponent from "@/components/ContactComponent/ContactComponent.vue";
+import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
+import ContactComponent from '@/components/ContactComponent/ContactComponent.vue'
 import '../view.css'
 export default defineComponent({
-  name: "KarriereView",
+  name: 'KarriereView',
   components: {
     FooterComponent,
     PicBackgroundComponent,
@@ -68,14 +72,32 @@ export default defineComponent({
       imagePath: 'images/Karriere.JPG',
       title: 'Karriere',
       cards: [
-        { front: 'Mobiles Arbeiten', back: 'Nähere Informationen zum mobilen Arbeiten' },
-        { front: 'Obst am Arbeitsplatz', back: 'Nähere Informationen zum Obst am Arbeitsplatz' },
-        { front: 'Weiterbildungsmöglichkeiten', back: 'Nähere Informationen zu Weiterbildungsmöglichkeiten' },
-        { front: 'Flexible Arbeitszeiten', back: 'Nähere Informationen zu flexiblen Arbeitszeiten' },
-        { front: 'Betriebliche Gesundheitsförderung', back: 'Nähere Informationen zur betrieblichen Gesundheitsförderung' },
-        { front: 'Mitarbeiter-Events', back: 'Nähere Informationen zu Mitarbeiter-Events' }
+        {
+          front: 'Mobiles Arbeiten',
+          back: 'Flexibilität, Produktivität: Arbeit von überall, jederzeit.'
+        },
+        {
+          front: 'Obst am Arbeitsplatz',
+          back: 'Gesundheit, Energie: Frische Snacks für kreative Köpfe.'
+        },
+        {
+          front: 'Weiterbildungsmöglichkeiten',
+          back: 'Lernen, Wachsen: Chancen für berufliche Entwicklung und Weiterbildung.'
+        },
+        {
+          front: 'Flexible Arbeitszeiten',
+          back: 'Balance, Freiheit: Arbeit nach individuellem Rhythmus.'
+        },
+        {
+          front: 'Betriebliche Gesundheitsförderung',
+          back: 'Wohlbefinden, Prävention: Programme für gesunde Mitarbeiter.'
+        },
+        {
+          front: 'Mitarbeiter-Events',
+          back: 'Teamgeist, Spaß: Gemeinsame Erlebnisse, Bindung stärken.'
+        }
       ]
-    };
+    }
   }
-});
+})
 </script>
