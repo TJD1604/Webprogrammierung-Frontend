@@ -2,7 +2,6 @@
 import { defineComponent } from 'vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
-import './ImpressumView.css'
 
 export default defineComponent({
   name: 'ImpressumView',
@@ -11,15 +10,17 @@ export default defineComponent({
     PicBackgroundComponent
   },
   data() {
+    // Data properties for the ImpressumView component
     return {
       options: {
+        // Configuration options for full-page component
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['1', '2', '3']
       },
-      imagePath: 'images/Impressum.jpg',
-      title: 'Impressum'
+      imagePath: 'images/Impressum.jpg', // Path for the background image
+      title: 'Impressum' // Title for the background image
     }
   }
 })
@@ -27,15 +28,17 @@ export default defineComponent({
 
 <template>
   <div>
+    <!-- Utilizes a full-page component -->
     <full-page :options="options">
       <div class="section">
         <div class="position-relative">
+          <!-- Background image component -->
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
       <div class="section">
         <div class="content-inner">
-          
+          <!-- Text content for Impressum page -->
           <div class="textdev">
             <h2 class="subheading">Angaben gemäß § 5 TMG: <br /></h2>
             <p>
@@ -54,9 +57,23 @@ export default defineComponent({
           </div>
         </div>
       </div>
+      <!-- Footer component -->
       <div class="section">
         <FooterComponent />
       </div>
     </full-page>
   </div>
 </template>
+
+<style>
+.subheading{
+font-size: medium !important;
+}
+.textdev{
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.maillink{
+color: black;
+}
+</style>
