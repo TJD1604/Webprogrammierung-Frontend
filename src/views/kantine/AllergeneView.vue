@@ -3,7 +3,6 @@ import { defineComponent } from 'vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
-import './AllergeneView.css'
 
 export default defineComponent({
   name: 'AllergeneView',
@@ -12,15 +11,17 @@ export default defineComponent({
     PicBackgroundComponent
   },
   data() {
+    // Data properties 
     return {
       options: {
+        // Configuration options for full-page component
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['1', '2', '3']
       },
-      imagePath: 'images/Allergene.jpg',
-      title: 'Allgergene'
+      imagePath: 'images/Allergene.jpg', // Path for the background image
+      title: 'Allgergene' // Title for the background image
     }
   }
 })
@@ -28,14 +29,17 @@ export default defineComponent({
 
 <template>
   <div>
+     <!-- Utilizes a full-page component-->
     <full-page :options="options">
       <div class="section">
         <div class="position-relative">
+          <!-- Background image component -->
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
       <div class="section">
         <div class="content-inner">
+           <!-- Table displaying allergen information -->
           <div class="tabellendiv">
             <table class="table">
               <tr>
@@ -103,8 +107,42 @@ export default defineComponent({
         </div>
       </div>
       <div class="section">
+        <!-- Footer component -->
         <FooterComponent />
       </div>
     </full-page>
   </div>
 </template>
+
+<style>
+.tabellendiv{
+margin-top: 70px;
+margin-left: 80px;
+margin-right: 80px;
+}
+.acronym{
+    font-weight: bold;
+}
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: solid #CCC 1px;
+    border-radius: 5px;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    padding: 10px;
+    border-bottom: solid #CCC 1px;
+  }
+  
+  th:first-child, td:first-child {
+    border-left: solid #CCC 1px;
+  }
+  
+  th:last-child, td:last-child {
+    border-right: solid #CCC 1px;
+  }
+  
+</style>
