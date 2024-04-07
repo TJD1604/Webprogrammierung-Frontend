@@ -66,7 +66,7 @@ export default {
   methods: {
     // Method to handle form submission
     submitForm() {
-      // Add form submission logic here
+      alert('hi')
     }
   }
 }

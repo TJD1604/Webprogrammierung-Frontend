@@ -50,7 +50,7 @@ export default defineComponent({
             <h2 class="subheading">Kontakt:</h2>
             <p>
               Telefon: +49 1234 56789<br />E-Mail:
-              <a href="mailtos_bruckmoser22@hwr-berlin.de:" class="maillink">
+              <a class="maillink">
                 s_bruckmoser22@hwr-berlin.de</a
               >
             </p>
