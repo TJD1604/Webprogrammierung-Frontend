@@ -2,6 +2,38 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+# Structure
+
+Hier ist eine nummerierte Liste aller Seiten und Unterseiten des Menüs:
+
+1. Home
+2. Über uns
+   - Auszeichnungen
+   - Geschichte
+   - FAQ
+3. Mitarbeitende
+   - Mitarbeitende im Detail
+4. Unsere Spendenprojekte
+   - Unsere Spendenprojekte im Detail
+5. Produkte
+   - Aktuelle Künstlerin
+6. Partner:innen
+   - Partner:innen im Detail
+7. Karriere
+   - Jobangebote
+8. Weiterbildungen
+9. Wettbewerbe
+10. Kantine
+    - Allergene
+11. Kontakt
+12. Anreise
+13. Datenschutzrichtlinien
+14. Impressum
+
+Weitere Seiten die nicht im Menü angezeigt werden:
+ - Details der Produkte -> wird mit einem Popup über einen Klick auf das Bild angezeigt
+ - Details eines Jobangebots -> wird mit einem Klick auf ein Jobangebot aufgerufen
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
