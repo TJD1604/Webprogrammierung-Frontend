@@ -1,5 +1,10 @@
 <template>
   <!-- Footer section -->
+  <img
+                  src="/footer.png"
+                  class="footer-image"
+                />
+<footer style="background-color: #0F0F0F;"></footer>
   <footer style="background-color: #0F0F0F;">
     <div class="container p-4">
       <div class="row">
