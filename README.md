@@ -82,3 +82,8 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+### Hinweise:
+
+Namenskonventionen wurden situationsweise entschieden, da es um ein künstlerisches Projekt geht.
+Die Dokumentationen der verwendetetn Bibliotheken wurden genutzt.
