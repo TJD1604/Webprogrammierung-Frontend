@@ -14,6 +14,7 @@ export default defineComponent({
   },
   data() {
     return {
+      x: 0,
       options: {
         licenseKey: 'gplv3-license',
         navigation: true,
@@ -40,6 +41,11 @@ export default defineComponent({
           back: 'Pixel malen, Klicks kreativ: Virtuelle Kreativität entfesseln.'
         }
       ]
+    }
+  },
+  methods: {
+    onMousemove(e) {
+      this.x = e.clientX
     }
   }
 })
@@ -69,10 +75,15 @@ export default defineComponent({
               </p>
             </div>
             <div>
-              <div class="box">
+              <div
+                @mousemove="onMousemove"
+                :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }"
+                class="movearea"
+              >
                 <p class="stay-tuned">Mehr Wettbewerbe</p>
                 <h3 class="coming-soon">COMING SOON</h3>
-                <p class="stay-tuned">Stay Tuned</p>
+                <p class="stay-tuned">Hover Me</p>
+                
               </div>
             </div>
           </div>
@@ -101,15 +112,17 @@ export default defineComponent({
   </div>
 </template>
 <style>
-.box {
+.movearea {
   width: 250px;
   height: 250px;
-  border: 2px solid #d2b89d;
+  border: 2px solid black;
   border-radius: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 0.3s background-color ease;
+
 }
 
 .coming-soon {
@@ -118,6 +131,6 @@ export default defineComponent({
 
 .info,
 .stay-tuned {
-  color: #d2b89d;
+  color: white;
 }
 </style>
