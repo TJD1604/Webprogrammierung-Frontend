@@ -3,7 +3,6 @@ import { defineComponent } from "vue";
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 
 import PicBackgroundComponent from "@/components/PicBackground/PicBackgroundComponent.vue";
-import './MitarbeitendeView.css'
 export default defineComponent({
   name: "MitarbeitendeView",
   components: {
