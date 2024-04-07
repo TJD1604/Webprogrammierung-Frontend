@@ -1,7 +1,11 @@
 <template>
+  <!-- Container for the image and text overlay -->
     <div class="container">
+      <!-- Image with dynamic source binding -->
   <img :src="imagePath" alt="Avatar" class="image" style="width:100%">
+  <!-- Text overlay -->
   <div class="middle">
+    <!-- Dynamic text content -->
     <div class="text">{{ imageText }}</div>
   </div>
 </div>
@@ -10,17 +14,13 @@
   <script lang="ts">
   export default {
     props: {
-      imageText: String,
-      imagePath: String  
+      imageText: String, // Text to display on the image overlay
+      imagePath: String  // Path for the image source
     },
-    methods: {
-    }
   }
   </script>
   
   <style scoped>
-  
-
 .container {
   position: relative;
   padding: 0;
