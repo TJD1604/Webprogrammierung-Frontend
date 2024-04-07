@@ -1,4 +1,6 @@
 <template>
+  
+  <!-- https://github.com/EvodiaAut/vue-cookieconsent-component/blob/master/src/components/CookieConsent.vue -->
   <!-- Cookie consent component with transition -->
   <transition :name="transition">
     <div v-if="show" class="cookie-consent" role="dialog">
