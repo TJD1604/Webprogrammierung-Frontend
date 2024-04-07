@@ -14,13 +14,13 @@
             Das Solidarity Studio befindet sich inmitten einer lebendigen Nachbarschaft, umgeben von Kunstgalerien, Cafés und kulturellen Einrichtungen. Unsere Lage im Herzen der Stadt spiegelt unsere Verbundenheit mit der Gemeinschaft wider und lädt jeden ein, Teil unserer solidarischen Gemeinschaft zu werden.
           </p>
           <p>
-            <strong>Adresse:</strong> [Adresse des Studios]
+            <strong>Adresse:</strong> Alt-Friedrichsfelde 60
           </p>
           <p>
-            <strong>Anreise:</strong> Das Studio ist bequem mit öffentlichen Verkehrsmitteln erreichbar. Die nächstgelegene U-Bahn-Station <em>[Name der U-Bahn-Station]</em> liegt nur wenige Gehminuten entfernt und bietet direkte Verbindungen zu allen wichtigen Stadtteilen. Parkplätze stehen ebenfalls zur Verfügung.
+            <strong>Anreise:</strong> Das Studio ist bequem mit öffentlichen Verkehrsmitteln erreichbar. Die nächstgelegene U-Bahn-Station <em>Alt-Friedrichsfelde</em> liegt nur wenige Gehminuten entfernt und bietet direkte Verbindungen zu allen wichtigen Stadtteilen. Parkplätze stehen ebenfalls zur Verfügung.
           </p>
           <p>
-            Für Besucher von außerhalb der Stadt ist der internationale Flughafen <em>[Name des Flughafens]</em> nur eine kurze Fahrt entfernt. Von dort aus gelangen Sie mit öffentlichen Verkehrsmitteln oder dem Taxi schnell und einfach zu unserem Studio.
+            Für Besucher von außerhalb der Stadt ist der internationale Flughafen <em>Musterflughafen</em> nur eine kurze Fahrt entfernt. Von dort aus gelangen Sie mit öffentlichen Verkehrsmitteln oder dem Taxi schnell und einfach zu unserem Studio.
           </p>
           <p>
             Wir freuen uns darauf, Sie im Solidarity Studio willkommen zu heißen und Ihnen ein inspirierendes und kreatives Umfeld zu bieten.
