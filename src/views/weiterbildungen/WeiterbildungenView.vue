@@ -1,46 +1,55 @@
 <script lang="ts">
+// Importing necessary components and styles
 import { defineComponent } from 'vue'
 import PicBackgroundComponent from '@/components/PicBackground/PicBackgroundComponent.vue'
 import FooterComponent from '@/components/Footer/FooterComponent.vue'
 import LearnCardComponent from '@/components/LearnCard/LearnCardComponent.vue'
-
 import '../view.css'
+
+// Exporting the component definition
 export default defineComponent({
-  name: 'WeiterbildungenView',
+  name: 'WeiterbildungenView', // Component name
   components: {
     FooterComponent,
     PicBackgroundComponent,
     LearnCardComponent
   },
+  // Data properties
   data() {
     return {
-      options: {
+      options: { // Options for full-page component
         licenseKey: 'gplv3-license',
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['1', '2', '3']
       },
-      imagePath: 'images/Weiterbildung.jpg',
-      title: 'Weiterbildungen'
+      imagePath: 'images/Weiterbildung.jpg', // Path to the background image
+      title: 'Weiterbildungen' // Title of the section
     }
   }
 })
 </script>
 
 <template>
+  <!-- Main template -->
   <div>
+    <!-- Full-page component with options -->
     <full-page :options="options">
+      <!-- Section 1: Background image -->
       <div class="section">
         <div class="position-relative">
           <PicBackgroundComponent :imagePath="imagePath" :title="title" />
         </div>
       </div>
+      <!-- Section 2: Content -->
       <div class="section">
         <div class="content-inner">
           <div class="button-container">
+            <!-- Heading and information -->
             <h2>Kostenlose Weiterbildungen</h2>
             <p>Entdecke unsere vielfältigen kostenlosen künstlerischen Weiterbildungen und erweitere deine kreativen Fähigkeiten ohne Kosten. Tauche ein in die Welt der Malerei, Keramik, Fotografie und Schauspiel und entwickle deine Fertigkeiten unter der Anleitung erfahrener Experten. Nutze diese Gelegenheit, um deine Leidenschaft für Kunst zu entfalten und neue Horizonte zu erkunden.</p>
           </div>
+          <!-- Component to display LearnCard -->
           <div class="button-container">
             <LearnCardComponent
               headline="Malerei"
@@ -65,6 +74,7 @@ export default defineComponent({
           </div>
         </div>
       </div>
+      <!-- Section 3: Footer -->
       <div class="section">
         <FooterComponent />
       </div>
