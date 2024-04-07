@@ -1,14 +1,24 @@
 <template>
+    <!-- Carousel container -->
+
   <div class="carousel-container">
+        <!-- Carousel -->
+
     <div class="carousel" ref="carousel">
+            <!-- Review items -->
+
       <div class="review" v-for="(review, index) in reviews" :key="index" :class="{ 'active': index === currentSlide }">
         <div class="stars">{{ review.stars }}</div>
         <div class="username">{{ review.username }}</div>
         <div class="text">{{ review.text }}</div>
       </div>
     </div>
+        <!-- Navigation buttons -->
+
     <div class="navigation">
       <button class="prev" @click="prevSlide">←</button>
+            <!-- Dots for navigation -->
+
       <div class="dots">
         <span class="dot" v-for="(review, index) in reviews" :key="index" :class="{ 'active': index === currentSlide }" @click="jumpToSlide(index)"></span>
       </div>
@@ -21,7 +31,11 @@
 export default {
   data() {
     return {
+            // Index of the current slide
+
       currentSlide: 0,
+            // Reviews data
+
       reviews: [
         {
           stars: '★★★★★',
@@ -62,27 +76,30 @@ export default {
     };
   },
   methods: {
+    // Go to the previous slide
     prevSlide() {
       this.currentSlide = (this.currentSlide - 1 + this.reviews.length) % this.reviews.length;
     },
+    // Go to the next slide
     nextSlide() {
       this.currentSlide = (this.currentSlide + 1) % this.reviews.length;
     },
+    // Jump to a specific slide
     jumpToSlide(index) {
-  this.currentSlide = index;
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach((dot, i) => {
-    if (i === index) {
-      dot.classList.add('wide');
-    } else {
-      dot.classList.remove('wide');
+      this.currentSlide = index;
+      // Highlight the corresponding dot
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.add('wide');
+        } else {
+          dot.classList.remove('wide');
+        }
+      });
     }
-  });
-}
   }
 }
 </script>
-
 <style scoped>
 .carousel-container {
   position: relative;

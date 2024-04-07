@@ -8,11 +8,14 @@ export default defineComponent({
   },
   data() {
     return {
+      // Indicates whether the arrow should be shown or not
       showArrow: false,
+      // Timeout ID for controlling arrow visibility
       timeoutId: null
     };
   },
   mounted() {
+    // Delayed execution to show the arrow after 2 seconds
     this.timeoutId = setTimeout(() => {
       this.showArrow = true;
     }, 2000);
@@ -24,20 +27,23 @@ export default defineComponent({
 <template>
   <div class="pic-background-wrapper">
     <div class="pic-background">
+      <!-- Background image -->
       <img
         :src="imagePath"
         class="background-image"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1"
       />
+      <!-- Card content -->
       <div class="pic-bottom">
         <h1 class="title">{{ title }}</h1>
-        <a href="/produkte" class="transparent-button">→</a>
+        <!-- Button linking to products page -->
+        <a href="/products" class="transparent-button">→</a>
+        <!-- Scroll down arrow -->
         <a v-if="showArrow" class="scroll-down-arrow">↓</a>
       </div>
     </div>
   </div>
 </template>
-
 <style>
 .pic-background-wrapper {
   position: relative;
