@@ -18,9 +18,11 @@ export default defineComponent({
 
 
 <template>
+  <!-- Header Line Component -->
   <div class="position-relative">
     <HeaderLineComponent class="position-absolute top-0"/>
   </div>
+  <!-- Cookie Consent Component -->
   <CookieConsent 
     message="Wir backen nicht nur Cookies in unserer Kantine, sondern auch auf unserer Webseite."
     linkLabel="Erfahre mehr"
@@ -42,7 +44,9 @@ export default defineComponent({
       }"
     
   />
+  <!-- Router View for rendering different components based on the route -->
   <RouterView />
+  <!-- Footer Component -->
   <FooterComponent />
 </template>
 
@@ -79,11 +83,11 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .content-inner {
-  width: 80% !important; /* Maximal 80% der Bildschirmbreite einnehmen */
-  margin: 0 auto !important; /* Horizontal zentrieren */
+  width: 80% !important; /* Take up maximum 80% of the screen width */
+  margin: 0 auto !important; /* Center horizontally */
   display: flex !important;
-  justify-content: center !important; /*Horizontal zentrieren */
-  align-items: center !important; /* Vertikal zentrieren */
+  justify-content: center !important; /* Center horizontally */
+  align-items: center !important; /* Center vertically */
 }
 
 </style>
